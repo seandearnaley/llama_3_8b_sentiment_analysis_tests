@@ -6,6 +6,7 @@ from typing import Any, Dict, List
 
 from langchain_community.llms import Ollama
 
+from utils.error_decorator import handle_errors
 from utils.file_utils import get_file_content, save_results
 from utils.validation_utils import (
     parse_json_numeric_value,
@@ -131,29 +132,26 @@ def format_prompt(
     )
 
 
+@handle_errors(default_return={})
 def process_content(
     llm: Ollama, prompt: str, url: str, news_object: List[Dict[str, Any]]
 ) -> Dict[str, Any]:
-    try:
-        start_time = time.time()
-        output = llm.invoke(prompt)
-        time_taken = time.time() - start_time
+    start_time = time.time()
+    output = llm.invoke(prompt)
+    time_taken = time.time() - start_time
 
-        valid, sentiment_json = validate_json(output)
-        sentiment_json.update(
-            {
-                "valid": valid,
-                "url": url,
-                "published": find_published_date(news_object, url),
-                "time_taken": round(time_taken, 2),
-            }
-        )
-        if not valid:
-            logging.error(f"Invalid JSON output for URL {url}: {output}")
-        return sentiment_json
-    except Exception as e:
-        logging.error(f"Error processing URL {url}: {e}")
-        return {}
+    valid, sentiment_json = validate_json(output)
+    sentiment_json.update(
+        {
+            "valid": valid,
+            "url": url,
+            "published": find_published_date(news_object, url),
+            "time_taken": round(time_taken, 2),
+        }
+    )
+    if not valid:
+        logging.error(f"Invalid JSON output for URL {url}: {output}")
+    return sentiment_json
 
 
 def analyze_content(
@@ -174,10 +172,12 @@ def analyze_content(
     return sentiments_map
 
 
+@handle_errors(default_return="")
 def find_published_date(news_object, url):
     return next((news["published"] for news in news_object if news["link"] == url), "")
 
 
+@handle_errors(default_return=0.0)
 def compute_weighted_average_sentiment(sentiments_map: Dict[str, Dict]) -> float:
     average_sentiment = 0.0
     total_weight = 0.0
