@@ -135,13 +135,12 @@ for news in news_object:
 # JSON helper functions
 
 
-def validate_json(json_data) -> tuple[bool, str]:
-    json_str = ""
+def validate_json(json_data) -> tuple[bool, dict]:
     try:
-        json_str = json.loads(json_data)
-    except ValueError as err:
-        return [False, err]
-    return [True, json_str]
+        json_dict = json.loads(json_data)
+        return True, json_dict
+    except ValueError:
+        return False, {}
 
 
 def parse_json_numeric_value(json_data, key) -> float:

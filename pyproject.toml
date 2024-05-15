@@ -1,6 +1,6 @@
 
 [tool.poetry]
-name = "finance"
+name = "llama_3_8b_sentiment_analysis_tests"
 version = "0.1.0"
 description = ""
 authors = []
@@ -9,23 +9,14 @@ authors = []
 python = "^3.10"
 BeautifulSoup4 = "^4.12.3"
 yfinance = "^0.2.38"
-pandas = "^2.2.2"
-numpy = "*"
-ta-lib = "^0.4.28"
-pip = "^24.0"
-duckduckgo_search = "^6.0.0"
-vectorbt = "^0.26.1"
-lumibot = "*"
-backtrader = "^1.9.78.123"
-dearpygui = "^1.11.1"
-requests_cache = "^1.2.0"
-requests_ratelimiter = "^0.6.0"
-pyrate_limiter = "*"
-pandas_datareader = "^0.10.0"
 FinNews = "^1.1.0"
 langchain-community = "^0.0.38"
+setuptools = "^69.5.1"
 
 [tool.poetry.dev-dependencies]
+
+[tool.poetry.group.dev.dependencies]
+ruff = "^0.4.4"
 
 [build-system]
 requires = ["poetry-core"]
