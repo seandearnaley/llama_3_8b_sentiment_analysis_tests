@@ -1,3 +1,129 @@
+# Llama 3 8b Sentiment Analysis Tests
+
+This project contains a set of scripts for generating sentiment analysis results using multiple models and comparing their performance. The primary scripts are `generate_model_sentiments.py` for gathering and processing news articles, and `generate_model_comparison_report.py` for analyzing and comparing the results.
+
+## Table of Contents
+- [Installation](#installation)
+- [Usage](#usage)
+  - [Configuration](#configuration)
+  - [Generating Sentiments](#generating-sentiments)
+  - [Generating Comparison Report](#generating-comparison-report)
+- [Scripts](#scripts)
+  - [generate_model_sentiments.py](#generate_model_sentimentspy)
+  - [generate_model_comparison_report.py](#generate_model_comparison_reportpy)
+- [Utilities](#utilities)
+- [Directory Structure](#directory-structure)
+
+## Installation
+
+To get started, you'll need to have [Poetry](https://python-poetry.org/) installed. Clone the repository and install the dependencies:
+
+```bash
+git clone <repository_url>
+cd llama_3_8b_sentiment_analysis_tests
+poetry install
+```
+
+## Usage
+
+### Configuration
+
+Configure the script by editing the `config.yaml` file:
+
+```yaml
+ticker_symbol: "AAPL"
+max_news_age: 7
+max_news_items: 10
+models_to_test:
+  - "llama3_8b-instruct-fp16"
+  - "llama3_8b-instruct-q4_K_M"
+  - "llama3_8b-instruct-q5_K_M"
+  - "llama3_8b-instruct-q8_0"
+  - "llama3_8b-instruct-sentiment_analysis-fp16"
+  - "llama3_8b-instruct-sentiment_analysis-q4_K_M"
+  - "llama3_8b-instruct-sentiment_analysis-q5_K_M"
+  - "llama3_8b-instruct-sentiment_analysis-q8_0"
+sample_size: 8
+```
+
+### Generating Sentiments
+
+To generate sentiment analysis results for a specific company, run:
+
+```bash
+poetry run python generate_model_sentiments.py
+```
+
+This script fetches news articles, processes them, and evaluates them using different sentiment analysis models.
+
+### Generating Comparison Report
+
+After generating the sentiment analysis results, you can create a comparison report by running:
+
+```bash
+poetry run python generate_model_comparison_report.py
+```
+
+This script loads the sentiment analysis results, computes performance metrics, and generates a comprehensive comparison report.
+
+## Scripts
+
+### generate_model_sentiments.py
+
+This script fetches news articles related to a specific company, processes the articles, and evaluates them using multiple sentiment analysis models.
+
+- Fetches news articles using the Yahoo Finance API.
+- Processes the articles to extract relevant content.
+- Evaluates the content using different sentiment analysis models.
+- Saves the results in JSON format.
+
+### generate_model_comparison_report.py
+
+This script analyzes the sentiment analysis results from multiple models and generates a comparison report.
+
+- Loads sentiment analysis results from JSON files.
+- Computes performance metrics for each model.
+- Compares models using statistical tests (F-test, T-test).
+- Generates an Excel report with model details and comparison results.
+
+## Utilities
+
+The `utils` directory contains various utility modules:
+
+- `analysis_utils.py`: Functions for processing news articles, testing models, and analyzing content.
+- `error_decorator.py`: Decorators for handling errors.
+- `file_utils.py`: Functions for file operations (loading config, saving results).
+- `validation_utils.py`: Functions for validating JSON output.
+- `web_scraper.py`: Functions for scraping web content.
+
+## Directory Structure
+
+```
+llama_3_8b_sentiment_analysis_tests/
+├── messages/
+│   ├── sentiment_system_message.txt
+│   ├── sentiment_user_first_prompt.txt
+│   ├── sentiment_user_message.txt
+├── reports/
+│   ├── model_comparisons.xlsx
+│   ├── model_details.csv
+│   ├── statistical_comparisons.csv
+├── utils/
+│   ├── analysis_utils.py
+│   ├── error_decorator.py
+│   ├── file_utils.py
+│   ├── validation_utils.py
+│   ├── web_scraper.py
+├── .DS_Store
+├── config.yaml
+├── generate_model_comparison_report.py
+├── generate_model_sentiments.py
+├── poetry.lock
+├── pyproject.toml
+├── README.md
+```
+
+
 ### Interpreting Sentiment Analysis Model Comparison Results
 
 When working with sentiment analysis models, understanding their performance and comparing different models is crucial. Here’s a simple guide to help you interpret the results from our analysis, which includes model details, performance metrics, and statistical comparisons.
@@ -42,3 +168,12 @@ Imagine comparing `llama3_8b-instruct-fp16` with `llama3_8b-instruct-sentiment_a
 - **Statistical Tests**: If p-values are significant, the differences in performance metrics are meaningful.
 
 By understanding these metrics and comparisons, even beginners can make informed decisions about which sentiment analysis models to use based on their specific needs and contexts.
+
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Contributing
+
+Contributions are welcome! Please submit a pull request or open an issue to discuss improvements or bugs.
