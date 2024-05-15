@@ -1,78 +1,78 @@
 {
-  "average_sentiment": 0.62,
-  "time_taken": 54.94,
+  "average_sentiment": 0.24,
+  "time_taken": 54.69,
   "sentiments": {
-    "ae85385e": {
-      "reasoning": "The article provides an analysis of Coatue Management's latest 13F filing, which may give insights into their investment strategies and portfolio composition. This could be seen as a neutral to slightly positive sentiment, as it suggests that the company is actively managing its investments.",
-      "sentiment": 0.15,
-      "confidence": 0.6,
-      "valid": true,
-      "url": "https://finance.yahoo.com/news/philippe-laffonts-strategic-moves-q1-170230125.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 17:02:30 +0000",
-      "time_taken": 6.65
-    },
-    "65256590": {
-      "reasoning": "The article presents Nvidia's stock as the 'IBD Stock Of The Day', indicating a positive sentiment towards the company's upcoming quarterly earnings report, which could lead to increased investor confidence and potentially boost the stock value.",
-      "sentiment": 0.6,
-      "confidence": 0.8,
-      "valid": true,
-      "url": "https://finance.yahoo.com/m/901e1222-634c-3ed4-a9fa-52a7ec17eed3/nvidia%2C-ibd-stock-of-the-day%2C.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 16:53:13 +0000",
-      "time_taken": 5.84
-    },
-    "ce972942": {
-      "reasoning": "The article describes a positive performance by Apple, Microsoft, Google parent Alphabet, Amazon, Nvidia, Meta Platforms, and Tesla in 2023, but notes a significant divergence in their returns during the early part of the second quarter of 2024.",
-      "sentiment": 0.2,
-      "confidence": 0.75,
-      "valid": true,
-      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 16:17:42 +0000",
-      "time_taken": 6.54
-    },
-    "10776093": {
-      "reasoning": "The sentiment is positive based on the financial context of the sentence.",
-      "sentiment": 1.0,
-      "confidence": 0.4,
-      "valid": true,
-      "url": "https://finance.yahoo.com/news/next-ai-bull-run-just-160200870.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 16:02:00 +0000",
-      "time_taken": 3.21
-    },
-    "9384108e": {
-      "reasoning": "The article presents a positive outlook on Nvidia's upcoming earnings report, with analysts projecting high revenue estimates. The mention of artificial intelligence (AI) as a driving force for the company and its continued leadership in the tech space suggests strong growth prospects. This optimistic tone is likely to boost investor confidence and positively impact Nvidia's stock value.",
-      "sentiment": 0.8,
-      "confidence": 0.9,
-      "valid": true,
-      "url": "https://finance.yahoo.com/video/nvidia-q1-earnings-expect-144207780.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 14:42:07 +0000",
-      "time_taken": 8.15
-    },
-    "e53b79e1": {
-      "reasoning": "The sentiment is neutral based on the financial context of the sentence.",
-      "sentiment": 0.0,
-      "confidence": 0.4,
-      "valid": true,
-      "url": "https://finance.yahoo.com/m/78b76766-5929-3c73-9e80-9ad1393ed591/nvidia-stock-rises.-this-is.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 14:26:00 +0000",
-      "time_taken": 3.28
-    },
-    "7f254832": {
-      "reasoning": "The article reports a significant pay boost for Nvidia's CEO Jensen Huang, reaching $34.2 million, which is likely to positively impact employee morale and productivity. The company's strong performance, fueled by its AI chips and GPU market moats, has led to a 216% stock gain, making it one of the world's most valuable companies. Analysts have flagged potential upside from Nvidia's strong pricing power, with considerable upside to fiscal 2026 earnings that is still not fully priced.",
-      "sentiment": 0.8,
-      "confidence": 0.9,
-      "valid": true,
-      "url": "https://finance.yahoo.com/news/nvidias-market-value-nears-2-141842143.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 14:18:42 +0000",
-      "time_taken": 11.88
-    },
     "98d34f1a": {
-      "reasoning": "The article reports a record high in copper prices, which has led to a significant gain of around 30% in 2024 and fueled rallies for top copper mining stocks Newmont and Freeport-McMoRan.",
+      "reasoning": "The article reports a record high in copper prices, which has led to a significant gain of around 30% in 2024, driving up the stock value of top copper mining companies Newmont and Freeport-McMoRan.",
       "sentiment": 0.8,
       "confidence": 0.9,
       "valid": true,
       "url": "https://finance.yahoo.com/m/4c3284f6-3131-35db-9ceb-08a5d3abbeaa/copper-prices-have-surged-30%25.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 14:01:19 +0000",
-      "time_taken": 6.18
+      "published": "Wed, 15 May 2024 20:05:19 +0000",
+      "time_taken": 6.81
+    },
+    "ec88070b": {
+      "reasoning": "The sentiment is negative based on the financial context of the sentence.",
+      "sentiment": -1.0,
+      "confidence": 0.4,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/paul-tudor-jones-adjusts-portfolio-200123123.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 20:01:23 +0000",
+      "time_taken": 3.54
+    },
+    "50e2881b": {
+      "reasoning": "The article reports that Nvidia's shares are climbing due to KeyBanc Capital Markets' limited signs of a demand pause for the company, ahead of its first-quarter earnings. The expectation is that Nvidia will top Wall Street estimates, which suggests positive market sentiment towards the company's future performance.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/nvidia-earnings-keybanc-capital-sees-194356782.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 19:43:56 +0000",
+      "time_taken": 8.2
+    },
+    "ce972942": {
+      "reasoning": "The article mentions that the Magnificent Seven stocks (Apple, Microsoft, Google parent Alphabet, Amazon, Nvidia, Meta Platforms, and Tesla) had significant gains in 2023 but diverged in their returns during the early part of the second quarter of 2024. This divergence could lead to uncertainty and potentially affect investor sentiment towards these stocks.",
+      "sentiment": -0.2,
+      "confidence": 0.75,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 19:22:42 +0000",
+      "time_taken": 8.85
+    },
+    "30590623": {
+      "reasoning": "The article simply lists the companies highlighted in today's IBD Screen of the Day, without providing any analysis or opinion on their performance or future prospects.",
+      "sentiment": 0.0,
+      "confidence": 0.5,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/5a9a15d2-14ee-3633-b8a6-7244daefbf18/funds-keep-buying-nvidia%27s.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 19:21:25 +0000",
+      "time_taken": 5.08
+    },
+    "e53b79e1": {
+      "reasoning": "The sentiment is neutral based on the financial context of the sentence.",
+      "sentiment": 0.0,
+      "confidence": 1.0,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/78b76766-5929-3c73-9e80-9ad1393ed591/nvidia-stock-rises.-this-is.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 18:58:00 +0000",
+      "time_taken": 3.49
+    },
+    "d8ae9755": {
+      "reasoning": "The article expresses a negative sentiment towards the performance of one of the sector's benchmark exchange-traded funds (ETF) in the tech industry. It highlights that investors are not rushing to buy these tech stocks, which suggests a lack of confidence or interest in the current market conditions.",
+      "sentiment": -0.4,
+      "confidence": 0.75,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4eaf9074-d599-3691-b4f0-708f5d98b496/a-major-tech-etf-is-lagging..html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 18:53:00 +0000",
+      "time_taken": 7.45
+    },
+    "edd5c12e": {
+      "reasoning": "The article reports a positive development for Nvidia, as its technology is being showcased in a new artificial intelligence application by Google, which is expected to improve search capabilities. This suggests increased adoption and potential revenue growth for Nvidia.",
+      "sentiment": 0.6,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/dc591aa5-8656-399f-a2b0-90fb4c8c329e/nvidia-surges-after-google-ai.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 17:39:22 +0000",
+      "time_taken": 6.28
     }
   }
 }

@@ -1,51 +1,51 @@
 {
-  "average_sentiment": 0.66,
-  "time_taken": 29.19,
+  "average_sentiment": 0.34,
+  "time_taken": 31.7,
   "sentiments": {
-    "ae85385e": {
-      "reasoning": "The article does not provide any direct insights or mentions about Nvidia's stock value, but it discusses Coatue Management's latest 13F filing. The tone of the article is neutral and informative, focusing on the investment strategies and portfolio composition of Coatue Management.",
+    "98d34f1a": {
+      "reasoning": "The article does not mention Nvidia at all, so it is impossible to determine the sentiment towards its potential short-term stock value. The article discusses copper prices and their impact on top copper mining stocks Newmont and Freeport-McMoRan.",
       "sentiment": 0.0,
       "confidence": 1.0,
       "valid": true,
-      "url": "https://finance.yahoo.com/news/philippe-laffonts-strategic-moves-q1-170230125.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 17:02:30 +0000",
-      "time_taken": 2.84
+      "url": "https://finance.yahoo.com/m/4c3284f6-3131-35db-9ceb-08a5d3abbeaa/copper-prices-have-surged-30%25.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 20:05:19 +0000",
+      "time_taken": 2.95
     },
-    "65256590": {
-      "reasoning": "The article highlights Nvidia's upcoming quarterly earnings report, which suggests a positive sentiment towards the company's performance and potential short-term stock value.",
-      "sentiment": 0.72,
-      "confidence": 0.85,
+    "ec88070b": {
+      "reasoning": "The article reports a decrease in NVIDIA's shareholding by a hedge fund pioneer, which could be perceived as bearish for the company's short-term stock value.",
+      "sentiment": -0.23,
+      "confidence": 0.75,
       "valid": true,
-      "url": "https://finance.yahoo.com/m/901e1222-634c-3ed4-a9fa-52a7ec17eed3/nvidia%2C-ibd-stock-of-the-day%2C.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 16:53:13 +0000",
-      "time_taken": 1.99
+      "url": "https://finance.yahoo.com/news/paul-tudor-jones-adjusts-portfolio-200123123.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 20:01:23 +0000",
+      "time_taken": 2.35
     },
-    "ce972942": {
-      "reasoning": "The article mentions that Nvidia was one of the 'Magnificent Seven stocks' that performed well in 2023, but notes a divergence in returns for these stocks in the early part of the second quarter of 2024. This implies a neutral sentiment towards Nvidia's potential short-term stock value.",
-      "sentiment": 0.05,
-      "confidence": 0.8,
-      "valid": true,
-      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 16:17:42 +0000",
-      "time_taken": 3.18
-    },
-    "10776093": {
-      "reasoning": "The article's enthusiastic tone and language, such as 'massively' and 'change our lives', indicate a strong positive sentiment towards the potential short-term stock value of NVIDIA.",
-      "sentiment": 0.92,
-      "confidence": 0.85,
-      "valid": true,
-      "url": "https://finance.yahoo.com/news/next-ai-bull-run-just-160200870.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 16:02:00 +0000",
-      "time_taken": 2.16
-    },
-    "9384108e": {
-      "reasoning": "The article presents a positive outlook on Nvidia's upcoming earnings report, with analysts projecting high revenue estimates. The discussion highlights the company's strong position in the tech space and its continued growth driven by AI. The tone is optimistic, indicating a positive sentiment towards Nvidia's short-term stock value.",
+    "50e2881b": {
+      "reasoning": "The article discusses Nvidia's shares climbing ahead of its first quarter earnings, with KeyBanc Capital Markets seeing limited signs of a demand pause for the company. The analyst expects Nvidia to top Wall Street estimates, citing limited competitive risks and dominance in one of the fastest-growing workloads in cloud and enterprise.",
       "sentiment": 0.83,
       "confidence": 0.92,
       "valid": true,
-      "url": "https://finance.yahoo.com/video/nvidia-q1-earnings-expect-144207780.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 14:42:07 +0000",
-      "time_taken": 3.35
+      "url": "https://finance.yahoo.com/video/nvidia-earnings-keybanc-capital-sees-194356782.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 19:43:56 +0000",
+      "time_taken": 4.16
+    },
+    "ce972942": {
+      "reasoning": "The article mentions that Nvidia was one of the Magnificent Seven stocks that had big gains in 2023, but then shows a divergence of returns in the early part of the second quarter of 2024. This implies that the author is discussing the stock's past performance and current trend.",
+      "sentiment": 0.12,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 19:22:42 +0000",
+      "time_taken": 3.4
+    },
+    "30590623": {
+      "reasoning": "The article does not provide any specific information about Nvidia's short-term stock value, but it mentions the company as one of the highlighted stocks in the IBD Screen Of The Day, which is a positive indication.",
+      "sentiment": 0.2,
+      "confidence": 0.7,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/5a9a15d2-14ee-3633-b8a6-7244daefbf18/funds-keep-buying-nvidia%27s.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 19:21:25 +0000",
+      "time_taken": 2.61
     },
     "e53b79e1": {
       "reasoning": "The article suggests that Nvidia's stock value is unlikely to increase significantly unless the company beats its expected Q1 revenue forecast of $24.51 billion. This implies a neutral sentiment towards the potential short-term stock value, as the author does not express optimism or pessimism about the stock's performance.",
@@ -53,26 +53,26 @@
       "confidence": 0.8,
       "valid": true,
       "url": "https://finance.yahoo.com/m/78b76766-5929-3c73-9e80-9ad1393ed591/nvidia-stock-rises.-this-is.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 14:26:00 +0000",
-      "time_taken": 3.09
+      "published": "Wed, 15 May 2024 18:58:00 +0000",
+      "time_taken": 3.2
     },
-    "7f254832": {
-      "reasoning": "The article discusses Nvidia's strong financial performance, driven by its AI chips and GPU market moats, which led to a significant increase in the company's market value and CEO Jensen Huang's compensation. The analysts' flagging of potential upside from pricing power and earnings growth also contributed to a positive sentiment towards the stock.",
-      "sentiment": 0.73,
+    "d8ae9755": {
+      "reasoning": "The article highlights that tech has been performing well in the stock market, but one of its benchmark ETFs is not reflecting this. The author suggests that investors are hesitant to invest in these tech stocks due to lower earnings growth compared to M7's forecasts.",
+      "sentiment": 0.12,
       "confidence": 0.85,
       "valid": true,
-      "url": "https://finance.yahoo.com/news/nvidias-market-value-nears-2-141842143.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 14:18:42 +0000",
-      "time_taken": 4.48
+      "url": "https://finance.yahoo.com/m/4eaf9074-d599-3691-b4f0-708f5d98b496/a-major-tech-etf-is-lagging..html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 18:53:00 +0000",
+      "time_taken": 3.04
     },
-    "98d34f1a": {
-      "reasoning": "The article does not mention Nvidia at all, so it is impossible to determine the sentiment towards its potential short-term stock value.",
-      "sentiment": 0.0,
-      "confidence": 1.0,
+    "edd5c12e": {
+      "reasoning": "The article reports a positive event for Nvidia, as Google's AI conference showcased a new AI application that will improve search, which is likely to benefit Nvidia's business. The use of the word 'soared' to describe Nvidia's stock price also implies a strong and sudden increase in value.",
+      "sentiment": 0.83,
+      "confidence": 0.92,
       "valid": true,
-      "url": "https://finance.yahoo.com/m/4c3284f6-3131-35db-9ceb-08a5d3abbeaa/copper-prices-have-surged-30%25.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 14:01:19 +0000",
-      "time_taken": 2.02
+      "url": "https://finance.yahoo.com/m/dc591aa5-8656-399f-a2b0-90fb4c8c329e/nvidia-surges-after-google-ai.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 17:39:22 +0000",
+      "time_taken": 3.18
     }
   }
 }
