@@ -7,6 +7,7 @@ import requests_cache
 import yfinance as yf
 
 from utils.analysis_utils import (
+    AnalysisContext,
     clean_company_name,
     filter_recent_news,
     test_models,
@@ -61,34 +62,32 @@ def get_content_map(news_object: list, company_name: str, ticker_symbol: str) ->
     return content_map
 
 
-def print_company_info(company_name, ticker_symbol):
-    try:
-        print(f"Company: {company_name} ({ticker_symbol})")
-    except ValueError as e:
-        print(e)
-        return False
+@handle_errors(False)
+def log_company_info(company_name: str, ticker_symbol: str) -> bool:
+    if not company_name or not ticker_symbol:
+        raise ValueError("Invalid company name or ticker symbol.")
+    logging.info(f"Company: {company_name} ({ticker_symbol})")
     return True
 
 
 def main():
     config = load_config("config.yaml")
     company_name = get_company_name(config["ticker_symbol"])
-    if not print_company_info(company_name, config["ticker_symbol"]):
-        return
+
+    log_company_info(company_name, config["ticker_symbol"])
 
     news_object = get_news(
         config["ticker_symbol"], config["max_news_age"], config["max_news_items"]
     )
     content_map = get_content_map(news_object, company_name, config["ticker_symbol"])
 
-    test_models(
-        config["models_to_test"],
-        config["sample_size"],
-        content_map,
-        company_name,
-        news_object,
-        config["ticker_symbol"],
+    context = AnalysisContext(
+        content_map=content_map,
+        company_name=company_name,
+        news_object=news_object,
+        ticker_symbol=config["ticker_symbol"],
     )
+    test_models(config["models_to_test"], config["sample_size"], context)
 
 
 if __name__ == "__main__":

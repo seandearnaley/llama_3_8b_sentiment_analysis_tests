@@ -1,6 +1,7 @@
 import hashlib
 import logging
 import time
+from dataclasses import dataclass
 from datetime import datetime, timedelta
 from typing import Any, Dict, List
 
@@ -12,6 +13,15 @@ from utils.validation_utils import (
     parse_json_numeric_value,
     validate_json,
 )
+
+
+@dataclass
+class AnalysisContext:
+    content_map: Dict[str, str]
+    company_name: str
+    news_object: List[Dict[str, Any]]
+    ticker_symbol: str
+
 
 COMMON_SUFFIXES: List[str] = [
     "inc.",
@@ -29,7 +39,7 @@ DEFAULT_TEMPERATURE = 0.2
 DUMMY_PROMPT = "Hello"
 
 
-def hash_url(text):
+def hash_url(text: str) -> str:
     return hashlib.md5(text.encode()).hexdigest()[0:8]
 
 
@@ -56,19 +66,21 @@ def filter_recent_news(
 
 
 def test_models(
-    models_to_test, sample_size, content_map, company_name, news_object, ticker_symbol
-):
+    models_to_test: List[str],
+    sample_size: int,
+    context: AnalysisContext,
+) -> None:
     for model_name in models_to_test:
         logging.info(f"Testing model: {model_name}")
         for i in range(sample_size):
-            test_model(
-                model_name, i, content_map, company_name, news_object, ticker_symbol
-            )
+            test_model(model_name, i, context)
         logging.info("")
 
 
 def test_model(
-    model_name, iteration, content_map, company_name, news_object, ticker_symbol
+    model_name: str,
+    iteration: int,
+    context: AnalysisContext,
 ):
     start_time = time.time()
     llm = initialize_llm(model_name)
@@ -81,9 +93,7 @@ def test_model(
     sentiments_map = analyze_content(
         llm,
         analyze_prompt,
-        content_map,
-        company_name,
-        news_object,
+        context,
         model_name,
         iteration,
     )
@@ -94,7 +104,7 @@ def test_model(
 
     save_results(
         model_name,
-        ticker_symbol,
+        context.ticker_symbol,
         iteration,
         average_sentiment,
         end_time - start_time,
@@ -102,22 +112,46 @@ def test_model(
     )
 
 
-def initialize_llm(model_name):
+def analyze_content(
+    llm: Ollama,
+    analyze_prompt: str,
+    context: AnalysisContext,
+    model_name: str,
+    iteration: int,
+) -> Dict[str, Dict[str, Any]]:
+    sentiments_map = {}
+    is_sentiment_model = "sentiment" in model_name
+
+    for j, (url, content) in enumerate(context.content_map.items()):
+        prompt = format_prompt(
+            is_sentiment_model, analyze_prompt, content, context.company_name
+        )
+
+        logging.info(
+            f"Iteration: {iteration + 1}, item: {j + 1}/{len(context.content_map)}"
+        )
+        sentiment_json = process_content(llm, prompt, url, context.news_object)
+        if sentiment_json:
+            sentiments_map[hash_url(url)] = sentiment_json
+    return sentiments_map
+
+
+def initialize_llm(model_name: str) -> Ollama:
     return Ollama(model=model_name, temperature=DEFAULT_TEMPERATURE)
 
 
-def pre_warm_model(llm, dummy_prompt=DUMMY_PROMPT):
+def pre_warm_model(llm: Ollama, dummy_prompt: str = DUMMY_PROMPT) -> None:
     llm.invoke(dummy_prompt)
 
 
-def prepare_analyze_prompt(llm, model_name):
-    if "sentiment" not in model_name:
-        llm.system = get_file_content("sentiment_system_message.txt")
-        llm.invoke(get_file_content("sentiment_user_first_prompt.txt"))
-        analyze_prompt = get_file_content("sentiment_user_message.txt")
-    else:
-        analyze_prompt = ""
-    return analyze_prompt
+def prepare_analyze_prompt(llm: Ollama, model_name: str) -> str:
+    match model_name:  # Using match-case
+        case model_name if "sentiment" not in model_name:
+            llm.system = get_file_content("sentiment_system_message.txt")
+            llm.invoke(get_file_content("sentiment_user_first_prompt.txt"))
+            return get_file_content("sentiment_user_message.txt")
+        case _:  # Catch-all case (could be default sentiment model)
+            return ""
 
 
 def format_prompt(
@@ -152,24 +186,6 @@ def process_content(
     if not valid:
         logging.error(f"Invalid JSON output for URL {url}: {output}")
     return sentiment_json
-
-
-def analyze_content(
-    llm, analyze_prompt, content_map, company_name, news_object, model_name, iteration
-) -> Dict[str, Dict[str, Any]]:
-    sentiments_map = {}
-    is_sentiment_model = "sentiment" in model_name
-
-    for j, (url, content) in enumerate(content_map.items()):
-        prompt = format_prompt(
-            is_sentiment_model, analyze_prompt, content, company_name
-        )
-
-        logging.info(f"Iteration: {iteration + 1}, item: {j + 1}/{len(content_map)}")
-        sentiment_json = process_content(llm, prompt, url, news_object)
-        if sentiment_json:
-            sentiments_map[hash_url(url)] = sentiment_json
-    return sentiments_map
 
 
 @handle_errors(default_return="")

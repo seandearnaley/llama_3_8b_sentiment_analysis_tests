@@ -25,10 +25,10 @@ class SentimentResponse(BaseModel):
     )
 
 
-def validate_json(json_data: str) -> Tuple[bool, Dict]:
+def validate_json(json_str: str) -> Tuple[bool, Dict]:
     try:
-        SentimentResponse.model_validate_json(json_data, strict=True)
-        json_dict = json.loads(json_data)
+        SentimentResponse.model_validate_json(json_str, strict=True)
+        json_dict = json.loads(json_str)
         return True, json_dict
     except ValidationError as e:
         print(f"Pydantic validation error: {e.json()}")
