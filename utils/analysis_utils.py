@@ -1,32 +1,35 @@
 import hashlib
-import json
 import logging
-import os
-import re
 import time
 from datetime import datetime, timedelta
-from typing import Dict, List, Tuple, Union
+from typing import Any, Dict, List
 
 from langchain_community.llms import Ollama
+
+from utils.file_utils import get_file_content, save_results
+from utils.validation_utils import (
+    parse_json_numeric_value,
+    validate_json,
+)
+
+COMMON_SUFFIXES: List[str] = [
+    "inc.",
+    "incorporated",
+    "corp.",
+    "corporation",
+    "ltd.",
+    "limited",
+    "co.",
+    "company",
+]
+
+DEFAULT_TEMPERATURE = 0.2
+
+DUMMY_PROMPT = "Hello"
 
 
 def hash_url(text):
     return hashlib.md5(text.encode()).hexdigest()[0:8]
-
-
-def validate_json(json_data: str) -> Tuple[bool, Dict]:
-    try:
-        json_dict = json.loads(json_data)
-        return True, json_dict
-    except ValueError:
-        return False, {}
-
-
-def parse_json_numeric_value(json_data: Dict, key: str) -> Union[float, None]:
-    try:
-        return float(json_data[key])
-    except KeyError:
-        return search_numeric_value(json.dumps(json_data))
 
 
 def clean_company_name(long_name: str) -> str:
@@ -34,33 +37,14 @@ def clean_company_name(long_name: str) -> str:
     Cleans the company name by removing common suffixes and anything after a comma.
     """
     company_name = long_name.lower().split(",")[0]
-    to_remove = get_common_suffixes()
-    for word in to_remove:
+    for word in COMMON_SUFFIXES:
         company_name = company_name.replace(word, "")
     return company_name.strip()
 
 
-def get_common_suffixes() -> List[str]:
-    return [
-        "inc.",
-        "incorporated",
-        "corp.",
-        "corporation",
-        "ltd.",
-        "limited",
-        "co.",
-        "company",
-    ]
-
-
-def search_numeric_value(json_str: str) -> Union[float, None]:
-    match = re.search(r"[-+]?[0-1]\.\d+", json_str)
-    return float(match.group()) if match else None
-
-
 def filter_recent_news(
     news_object: List[Dict], max_news_age: int, max_news_items: int
-) -> List[Dict]:
+) -> List[Dict[str, Any]]:
     now_UTC = datetime.utcnow()
     cutoff_time = now_UTC - timedelta(days=max_news_age)
     return [
@@ -70,11 +54,26 @@ def filter_recent_news(
     ][:max_news_items]
 
 
+def test_models(
+    models_to_test, sample_size, content_map, company_name, news_object, ticker_symbol
+):
+    for model_name in models_to_test:
+        logging.info(f"Testing model: {model_name}")
+        for i in range(sample_size):
+            test_model(
+                model_name, i, content_map, company_name, news_object, ticker_symbol
+            )
+        logging.info("")
+
+
 def test_model(
     model_name, iteration, content_map, company_name, news_object, ticker_symbol
 ):
     start_time = time.time()
     llm = initialize_llm(model_name)
+
+    # Pre-warm the model
+    pre_warm_model(llm)
 
     analyze_prompt = prepare_analyze_prompt(llm, model_name)
 
@@ -103,16 +102,11 @@ def test_model(
 
 
 def initialize_llm(model_name):
-    return Ollama(model=model_name, temperature=0.2)
+    return Ollama(model=model_name, temperature=DEFAULT_TEMPERATURE)
 
 
-def read_file_content(file_path: str) -> str:
-    with open(file_path, "r") as file:
-        return file.read()
-
-
-def get_file_content(file_name: str) -> str:
-    return read_file_content(os.path.join("messages", file_name))
+def pre_warm_model(llm, dummy_prompt=DUMMY_PROMPT):
+    llm.invoke(dummy_prompt)
 
 
 def prepare_analyze_prompt(llm, model_name):
@@ -137,9 +131,34 @@ def format_prompt(
     )
 
 
+def process_content(
+    llm: Ollama, prompt: str, url: str, news_object: List[Dict[str, Any]]
+) -> Dict[str, Any]:
+    try:
+        start_time = time.time()
+        output = llm.invoke(prompt)
+        time_taken = time.time() - start_time
+
+        valid, sentiment_json = validate_json(output)
+        sentiment_json.update(
+            {
+                "valid": valid,
+                "url": url,
+                "published": find_published_date(news_object, url),
+                "time_taken": round(time_taken, 2),
+            }
+        )
+        if not valid:
+            logging.error(f"Invalid JSON output for URL {url}: {output}")
+        return sentiment_json
+    except Exception as e:
+        logging.error(f"Error processing URL {url}: {e}")
+        return {}
+
+
 def analyze_content(
     llm, analyze_prompt, content_map, company_name, news_object, model_name, iteration
-):
+) -> Dict[str, Dict[str, Any]]:
     sentiments_map = {}
     is_sentiment_model = "sentiment" in model_name
 
@@ -148,49 +167,15 @@ def analyze_content(
             is_sentiment_model, analyze_prompt, content, company_name
         )
 
-        print(f"\rIteration: {iteration + 1} item: {j + 1}/{len(content_map)}", end="")
-        output = llm.invoke(prompt)
-
-        valid, sentiment_json = validate_json(output)
-        if valid:
-            sentiment_json["url"] = url
-            sentiment_json["published"] = find_published_date(news_object, url)
+        logging.info(f"Iteration: {iteration + 1}, item: {j + 1}/{len(content_map)}")
+        sentiment_json = process_content(llm, prompt, url, news_object)
+        if sentiment_json:
             sentiments_map[hash_url(url)] = sentiment_json
-
     return sentiments_map
 
 
 def find_published_date(news_object, url):
     return next((news["published"] for news in news_object if news["link"] == url), "")
-
-
-def ensure_directory_exists(directory: str):
-    if not os.path.exists(directory):
-        os.makedirs(directory)
-
-
-def save_json_to_file(file_path: str, data: Dict):
-    with open(file_path, "w") as file:
-        json.dump(data, file, indent=2)
-
-
-def save_results(
-    model_name, ticker_symbol, iteration, average_sentiment, time_taken, sentiments_map
-):
-    results_dir = get_results_directory(model_name)
-    ensure_directory_exists(results_dir)
-
-    sentiment_file = os.path.join(results_dir, ticker_symbol + f"_{iteration}.json")
-    data = {
-        "average_sentiment": average_sentiment,
-        "time_taken": round(time_taken, 2),
-        "sentiments": sentiments_map,
-    }
-    save_json_to_file(sentiment_file, data)
-
-
-def get_results_directory(model_name: str) -> str:
-    return os.path.join("sentiments", model_name.replace(":", "_"))
 
 
 def compute_weighted_average_sentiment(sentiments_map: Dict[str, Dict]) -> float:

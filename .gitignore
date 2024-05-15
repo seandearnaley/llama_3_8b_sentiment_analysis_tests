@@ -1,3 +1,4 @@
 sentiments/
+sentiments_old/
 __pycache__/
 news_cache.sqlite

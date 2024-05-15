@@ -1,18 +1,21 @@
 #!/usr/bin/env python3
 import logging
-from functools import wraps
+from functools import lru_cache
 
 import FinNews as fn
 import requests_cache
-import yaml
 import yfinance as yf
 
-from utils import (
+from utils.analysis_utils import (
     clean_company_name,
     filter_recent_news,
-    test_model,
+    test_models,
 )
-from web_scraper import get_content
+from utils.error_decorator import handle_errors
+from utils.file_utils import (
+    load_config,
+)
+from utils.web_scraper import get_content
 
 # Configure logging
 logging.basicConfig(
@@ -25,26 +28,7 @@ requests_cache.install_cache(
 )  # Cache expires after 1 hour
 
 
-def handle_errors(default_return=None):
-    def decorator(func):
-        @wraps(func)
-        def wrapper(*args, **kwargs):
-            try:
-                return func(*args, **kwargs)
-            except Exception as e:
-                logging.error(f"Error in {func.__name__}: {e}")
-                return default_return
-
-        return wrapper
-
-    return decorator
-
-
-def load_config(file_path: str) -> dict:
-    with open(file_path, "r") as file:
-        return yaml.safe_load(file)
-
-
+@lru_cache(maxsize=None)
 @handle_errors()
 def get_company_name(ticker_symbol: str) -> str:
     ticker = yf.Ticker(ticker_symbol)
@@ -53,6 +37,7 @@ def get_company_name(ticker_symbol: str) -> str:
     return clean_company_name(ticker.info["longName"])
 
 
+@lru_cache(maxsize=None)
 @handle_errors([])
 def get_news(ticker_symbol: str, max_news_age: int, max_news_items: int) -> list:
     yahoo_feed = fn.Yahoo(topics=["$" + ticker_symbol])
@@ -83,18 +68,6 @@ def print_company_info(company_name, ticker_symbol):
         print(e)
         return False
     return True
-
-
-def test_models(
-    models_to_test, sample_size, content_map, company_name, news_object, ticker_symbol
-):
-    for model_name in models_to_test:
-        print(f"Testing model: {model_name}")
-        for i in range(sample_size):
-            test_model(
-                model_name, i, content_map, company_name, news_object, ticker_symbol
-            )
-        print("")
 
 
 def main():
