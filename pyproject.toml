@@ -12,6 +12,7 @@ yfinance = "^0.2.38"
 FinNews = "^1.1.0"
 langchain-community = "^0.0.38"
 setuptools = "^69.5.1"
+requests-cache = "^1.2.0"
 
 [tool.poetry.dev-dependencies]
 

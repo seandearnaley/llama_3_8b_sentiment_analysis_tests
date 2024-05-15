@@ -1,1 +1,3 @@
 sentiments/
+__pycache__/
+news_cache.sqlite

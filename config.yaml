@@ -1,0 +1,10 @@
+models_to_test:
+  - 'llama3:8b-instruct-sentiment_analysis-q4_K_M'
+  - 'llama3:8b-instruct-sentiment_analysis-q5_k_m'
+  - 'llama3:8b-instruct-q4_K_M'
+  - 'llama3:8b-instruct-q5_K_M'
+
+sample_size: 8
+ticker_symbol: 'NVDA'
+max_news_age: 1
+max_news_items: 8
