@@ -69,8 +69,11 @@ def compare_models(model1_sentiments: list, model2_sentiments: list) -> dict:
 
 
 def create_spreadsheet(
-    model_metrics: dict, comparisons: dict, output_file: str = "model_comparisons.xlsx"
+    model_metrics: dict,
+    comparisons: dict,
+    output_file: str = "reports/model_comparisons.xlsx",
 ):
+    os.makedirs("reports", exist_ok=True)
     writer = pd.ExcelWriter(output_file, engine="xlsxwriter")
 
     # Model Details Sheet
@@ -81,7 +84,7 @@ def create_spreadsheet(
         ]
     )
     model_details.to_excel(writer, sheet_name="Model Details", index=False)
-    model_details.to_csv("model_details.csv", index=False)  # Output to CSV
+    model_details.to_csv("reports/model_details.csv", index=False)  # Output to CSV
 
     # Statistical Comparisons Sheet
     comparison_results = pd.DataFrame(
@@ -94,7 +97,7 @@ def create_spreadsheet(
         writer, sheet_name="Statistical Comparisons", index=False
     )
     comparison_results.to_csv(
-        "statistical_comparisons.csv", index=False
+        "reports/statistical_comparisons.csv", index=False
     )  # Output to CSV
 
     writer.close()  # Use close() method instead of save() to properly write and close the file
