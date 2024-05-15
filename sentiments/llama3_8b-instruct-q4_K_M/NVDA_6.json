@@ -1,0 +1,75 @@
+{
+  "average_sentiment": 0.76,
+  "time_taken": 29.08,
+  "sentiments": {
+    "ae85385e": {
+      "reasoning": "The article does not provide any direct insights or mentions about Nvidia's stock value, but it discusses Coatue Management's latest 13F filing. The tone of the article is neutral and informative, focusing on the investment strategies and portfolio composition of Coatue Management.",
+      "sentiment": 0.0,
+      "confidence": 1.0,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/philippe-laffonts-strategic-moves-q1-170230125.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 17:02:30 +0000",
+      "time_taken": 2.84
+    },
+    "65256590": {
+      "reasoning": "The article highlights Nvidia's upcoming quarterly earnings report, which suggests a positive sentiment towards the company's performance and potential short-term stock value.",
+      "sentiment": 0.63,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/901e1222-634c-3ed4-a9fa-52a7ec17eed3/nvidia%2C-ibd-stock-of-the-day%2C.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 16:53:13 +0000",
+      "time_taken": 2.0
+    },
+    "ce972942": {
+      "reasoning": "The article mentions that Nvidia was part of the 'Magnificent Seven' stocks that performed well in 2023, but notes a divergence in returns at the start of Q2 2024. This implies that the author is neutral about Nvidia's short-term stock value, as they are not expressing any strong positive or negative sentiment.",
+      "sentiment": 0.0,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 16:17:42 +0000",
+      "time_taken": 3.41
+    },
+    "10776093": {
+      "reasoning": "The article's statement about the massive impact of the technology on people's lives implies a positive outlook, which is likely to be reflected in the stock value. The use of 'massively' and 'change our lives' emphasizes the significance of the technology, indicating a strong potential for growth.",
+      "sentiment": 0.82,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/next-ai-bull-run-just-160200870.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 16:02:00 +0000",
+      "time_taken": 2.94
+    },
+    "9384108e": {
+      "reasoning": "The article's tone is optimistic, with a focus on analyst projections and key factors that are expected to propel Nvidia's earnings report. The mention of artificial intelligence as a driving force for the company also contributes to a positive sentiment.",
+      "sentiment": 0.83,
+      "confidence": 0.92,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/nvidia-q1-earnings-expect-144207780.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 14:42:07 +0000",
+      "time_taken": 2.93
+    },
+    "e53b79e1": {
+      "reasoning": "The article suggests that Nvidia's stock value is tied to its ability to exceed consensus forecasts, implying a neutral sentiment towards its potential short-term stock value.",
+      "sentiment": 0.0,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/78b76766-5929-3c73-9e80-9ad1393ed591/nvidia-stock-rises.-this-is.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 14:26:00 +0000",
+      "time_taken": 2.1
+    },
+    "7f254832": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/news/nvidias-market-value-nears-2-141842143.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 14:18:42 +0000",
+      "time_taken": 4.76
+    },
+    "98d34f1a": {
+      "reasoning": "The article does not mention Nvidia at all, so it is impossible to determine the sentiment towards its potential short-term stock value.",
+      "sentiment": 0.0,
+      "confidence": 1.0,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4c3284f6-3131-35db-9ceb-08a5d3abbeaa/copper-prices-have-surged-30%25.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 14:01:19 +0000",
+      "time_taken": 2.02
+    }
+  }
+}

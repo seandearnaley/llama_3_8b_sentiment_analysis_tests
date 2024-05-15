@@ -1,0 +1,78 @@
+{
+  "average_sentiment": 0.58,
+  "time_taken": 53.68,
+  "sentiments": {
+    "ae85385e": {
+      "reasoning": "The article provides an analysis of Coatue Management's latest 13F filing, which may offer insights into their investment strategies and portfolio composition. This could be seen as a positive development for the company, potentially boosting investor confidence.",
+      "sentiment": 0.4,
+      "confidence": 0.6,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/philippe-laffonts-strategic-moves-q1-170230125.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 17:02:30 +0000",
+      "time_taken": 6.02
+    },
+    "65256590": {
+      "reasoning": "The article presents Nvidia's stock as the 'IBD Stock Of The Day', indicating a positive sentiment towards the company's upcoming quarterly earnings report, which could lead to increased investor confidence and potentially boost the stock value.",
+      "sentiment": 0.6,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/901e1222-634c-3ed4-a9fa-52a7ec17eed3/nvidia%2C-ibd-stock-of-the-day%2C.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 16:53:13 +0000",
+      "time_taken": 5.85
+    },
+    "ce972942": {
+      "reasoning": "The article highlights a significant divergence in returns among the 'Magnificent Seven' stocks, including Apple, Microsoft, Alphabet, Amazon, Nvidia, Meta Platforms, and Tesla, during the early part of the second quarter of 2024. This divergence suggests that some of these high-performing stocks may be experiencing a slowdown or facing challenges, which could negatively impact their stock values.",
+      "sentiment": -0.3,
+      "confidence": 0.75,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 16:17:42 +0000",
+      "time_taken": 8.76
+    },
+    "10776093": {
+      "reasoning": "The sentiment is positive based on the financial context of the sentence.",
+      "sentiment": 1.0,
+      "confidence": 0.4,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/next-ai-bull-run-just-160200870.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 16:02:00 +0000",
+      "time_taken": 3.21
+    },
+    "9384108e": {
+      "reasoning": "The article expresses optimism towards Nvidia's upcoming earnings report, with revenue estimates being bullish. The mention of artificial intelligence (AI) as a driving force for the company and its continued leadership in the tech space suggests positive growth prospects. Additionally, the key factors analysts expect to propel Nvidia's earnings report further support the optimistic sentiment.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/nvidia-q1-earnings-expect-144207780.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 14:42:07 +0000",
+      "time_taken": 8.05
+    },
+    "e53b79e1": {
+      "reasoning": "The sentiment is neutral based on the financial context of the sentence.",
+      "sentiment": 0.0,
+      "confidence": 0.4,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/78b76766-5929-3c73-9e80-9ad1393ed591/nvidia-stock-rises.-this-is.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 14:26:00 +0000",
+      "time_taken": 3.28
+    },
+    "7f254832": {
+      "reasoning": "The article reports a significant pay boost for Nvidia's CEO Jensen Huang, reaching $34.2 million, which is likely to positively impact investor sentiment towards the company. Additionally, the article highlights Nvidia's strong performance in the AI chip and GPU market, with its stock gaining 216%, making it one of the world's most valuable companies.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidias-market-value-nears-2-141842143.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 14:18:42 +0000",
+      "time_taken": 9.12
+    },
+    "98d34f1a": {
+      "reasoning": "The article reports a record high in copper prices, which has led to a significant gain of around 30% in 2024 and fueled rallies for top copper mining stocks Newmont and Freeport-McMoRan.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4c3284f6-3131-35db-9ceb-08a5d3abbeaa/copper-prices-have-surged-30%25.html?.tsrc=rss",
+      "published": "Wed, 15 May 2024 14:01:19 +0000",
+      "time_taken": 6.2
+    }
+  }
+}
