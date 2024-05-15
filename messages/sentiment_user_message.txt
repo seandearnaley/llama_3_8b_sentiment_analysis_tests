@@ -1,0 +1,1 @@
+classify the sentiment towards the potential short-term stock value of {company_name} of the following: <article>`{content_to_analyze}`</article>
