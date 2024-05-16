@@ -8,7 +8,6 @@ import yaml
 
 # Define constants for paths
 MESSAGES_DIR = "messages"
-SENTIMENTS_DIR = "sentiments"
 FILE_READ_MODE = "r"
 FILE_WRITE_MODE = "w"
 
@@ -48,25 +47,5 @@ def load_config(file_path: str) -> Dict[str, Any]:
         raise
 
 
-def get_results_directory(model_name: str) -> str:
-    return os.path.join(SENTIMENTS_DIR, model_name.replace(":", "_"))
-
-
-def save_results(
-    model_name: str,
-    ticker_symbol: str,
-    iteration: int,
-    average_sentiment: float,
-    time_taken: float,
-    sentiments_map: Dict[str, Any],
-) -> None:
-    results_dir = get_results_directory(model_name)
-    ensure_directory_exists(results_dir)
-
-    sentiment_file = os.path.join(results_dir, ticker_symbol + f"_{iteration}.json")
-    data = {
-        "average_sentiment": average_sentiment,
-        "time_taken": round(time_taken, 2),
-        "sentiments": sentiments_map,
-    }
-    save_json_to_file(sentiment_file, data)
+def get_results_directory(model_name: str, directory: str) -> str:
+    return os.path.join(directory, model_name.replace(":", "_"))

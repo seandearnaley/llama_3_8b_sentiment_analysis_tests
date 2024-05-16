@@ -1,5 +1,6 @@
 import hashlib
 import logging
+import os
 import time
 from dataclasses import dataclass
 from datetime import datetime, timedelta
@@ -8,11 +9,18 @@ from typing import Any, Dict, List
 from langchain_community.llms import Ollama
 
 from utils.error_decorator import handle_errors
-from utils.file_utils import get_file_content, save_results
+from utils.file_utils import (
+    ensure_directory_exists,
+    get_file_content,
+    get_results_directory,
+    save_json_to_file,
+)
 from utils.validation_utils import (
     parse_json_numeric_value,
     validate_json,
 )
+
+SENTIMENTS_DIR = "sentiments"
 
 
 @dataclass
@@ -110,6 +118,26 @@ def test_model(
         end_time - start_time,
         sentiments_map,
     )
+
+
+def save_results(
+    model_name: str,
+    ticker_symbol: str,
+    iteration: int,
+    average_sentiment: float,
+    time_taken: float,
+    sentiments_map: Dict[str, Any],
+) -> None:
+    results_dir = get_results_directory(model_name, directory=SENTIMENTS_DIR)
+    ensure_directory_exists(results_dir)
+
+    sentiment_file = os.path.join(results_dir, ticker_symbol + f"_{iteration}.json")
+    data = {
+        "average_sentiment": average_sentiment,
+        "time_taken": round(time_taken, 2),
+        "sentiments": sentiments_map,
+    }
+    save_json_to_file(sentiment_file, data)
 
 
 def analyze_content(
