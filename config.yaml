@@ -32,7 +32,7 @@ comparison_pairs:
 
 sentiment_save_folder: 'sentiments'
 
-sample_size: 2
+sample_size: 10
 report_example_sample_size: 5
 ticker_symbol: 'NVDA'
 max_news_age: 1
