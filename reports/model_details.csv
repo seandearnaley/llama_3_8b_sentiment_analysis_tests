@@ -1,4 +1,4 @@
-Model Name,Quantization Level,rate,valid_json_rate,variance,mean_sentiment,mean_confidence
+Model Name,Quantization Level,Inference Rate (s),Valid JSON Rate,Sentiment Variance,Mean Sentiment,Mean Confidence
 llama3_8b-instruct-sentiment_analysis-q4_K_M,q4_K_M,3.485,1.0,0.12,0.501,0.813
 llama3_8b-instruct-sentiment_analysis-q5_K_M,q5_K_M,4.158,1.0,0.116,0.595,0.856
 llama3_8b-instruct-sentiment_analysis-q8_0,q8_0,4.847,1.0,0.125,0.534,0.832

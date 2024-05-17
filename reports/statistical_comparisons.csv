@@ -1,4 +1,4 @@
-Comparison,f_statistic,f_p_value,t_statistic,t_p_value
+Comparison,F-Statistic,F-Test P-Value,T-Statistic,T-Test P-Value
 llama3_8b-instruct-fp16 vs llama3_8b-instruct-sentiment_analysis-fp16,8.235,0.005,-2.87,0.005
 llama3_8b-instruct-q4_K_M vs llama3_8b-instruct-sentiment_analysis-q4_K_M,5.184,0.024,-2.277,0.024
 llama3_8b-instruct-q5_K_M vs llama3_8b-instruct-sentiment_analysis-q5_K_M,18.747,0.0,-4.33,0.0

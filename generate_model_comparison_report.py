@@ -93,13 +93,22 @@ def create_spreadsheet(
 
     # Model Details Sheet
     model_details_data = [
-        {"Model Name": model, "Quantization Level": model.split("-")[-1], **metrics}
+        {
+            "Model Name": model,
+            "Quantization Level": model.split("-")[-1],
+            "Inference Rate (s)": metrics["rate"],
+            "Valid JSON Rate": metrics["valid_json_rate"],
+            "Sentiment Variance": metrics["variance"],
+            "Mean Sentiment": metrics["mean_sentiment"],
+            "Mean Confidence": metrics["mean_confidence"],
+            **(
+                {"Reasoning Samples": metrics["reasoning_samples"]}
+                if INCLUDE_REASONING_SAMPLES
+                else {}
+            ),
+        }
         for model, metrics in model_metrics.items()
     ]
-
-    if not INCLUDE_REASONING_SAMPLES:
-        for data in model_details_data:
-            data.pop("reasoning_samples", None)
 
     model_details = pd.DataFrame(model_details_data)
     model_details.to_excel(writer, sheet_name="Model Details", index=False)
@@ -110,7 +119,13 @@ def create_spreadsheet(
     # Statistical Comparisons Sheet
     comparison_results = pd.DataFrame(
         [
-            {"Comparison": comparison, **stats}
+            {
+                "Comparison": comparison,
+                "F-Statistic": stats["f_statistic"],
+                "F-Test P-Value": stats["f_p_value"],
+                "T-Statistic": stats["t_statistic"],
+                "T-Test P-Value": stats["t_p_value"],
+            }
             for comparison, stats in comparisons.items()
         ]
     )
