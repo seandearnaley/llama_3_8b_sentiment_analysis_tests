@@ -1,10 +1,21 @@
 import json
+import logging
 import os
 
 import numpy as np
 import pandas as pd
 from scipy.stats import f_oneway, ttest_ind
 from scipy.stats._stats_py import TtestResult
+
+from utils.file_utils import (
+    load_config,
+)
+
+CONFIG_FILE = "config.yaml"
+
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
 def load_json_files(model_path: str) -> list:
@@ -28,7 +39,7 @@ def extract_model_name(path: str) -> str:
     return os.path.basename(path)
 
 
-def compute_metrics(sentiments: list) -> dict:
+def compute_metrics(sentiments: list, report_example_sample_size: int) -> dict:
     valid_sentiments = [s for s in sentiments if s["valid"]]
     rate = np.mean([s["time_taken"] for s in valid_sentiments])
     valid_json_rate = len(valid_sentiments) / len(sentiments)
@@ -38,8 +49,8 @@ def compute_metrics(sentiments: list) -> dict:
     mean_sentiment = np.mean(sentiment_scores)
     mean_confidence = np.mean(confidence_scores)
     reasoning_samples = [
-        s["reasoning"] for s in valid_sentiments[:5]
-    ]  # Take the first 5 reasonings as sample
+        s["reasoning"] for s in valid_sentiments[:report_example_sample_size]
+    ]  # Take the first n reasonings as sample / report_example_sample_size
     return {
         "rate": rate,
         "valid_json_rate": valid_json_rate,
@@ -56,10 +67,6 @@ def compare_models(model1_sentiments: list, model2_sentiments: list) -> dict:
     variance_test = f_oneway(sentiments1, sentiments2)
     mean_test: TtestResult = ttest_ind(sentiments1, sentiments2)
 
-    # Debugging information
-    print(f"mean_test type: {type(mean_test)}")
-    print(f"mean_test: {mean_test}")
-
     return {
         "f_statistic": variance_test.statistic,
         "f_p_value": variance_test.pvalue,
@@ -71,9 +78,10 @@ def compare_models(model1_sentiments: list, model2_sentiments: list) -> dict:
 def create_spreadsheet(
     model_metrics: dict,
     comparisons: dict,
-    output_file: str = "reports/model_comparisons.xlsx",
+    output_file: str,
+    output_csv_folder: str,
 ):
-    os.makedirs("reports", exist_ok=True)
+    os.makedirs(output_csv_folder, exist_ok=True)
     writer = pd.ExcelWriter(output_file, engine="xlsxwriter")
 
     # Model Details Sheet
@@ -84,7 +92,9 @@ def create_spreadsheet(
         ]
     )
     model_details.to_excel(writer, sheet_name="Model Details", index=False)
-    model_details.to_csv("reports/model_details.csv", index=False)  # Output to CSV
+    model_details.to_csv(
+        os.path.join(output_csv_folder, "model_details.csv"), index=False
+    )
 
     # Statistical Comparisons Sheet
     comparison_results = pd.DataFrame(
@@ -97,64 +107,59 @@ def create_spreadsheet(
         writer, sheet_name="Statistical Comparisons", index=False
     )
     comparison_results.to_csv(
-        "reports/statistical_comparisons.csv", index=False
-    )  # Output to CSV
+        os.path.join(output_csv_folder, "statistical_comparisons.csv"), index=False
+    )
 
-    writer.close()  # Use close() method instead of save() to properly write and close the file
+    writer.close()
 
 
-# Define paths to your model directories
-model_dirs = [
-    "sentiments/llama3_8b-instruct-fp16",
-    "sentiments/llama3_8b-instruct-q4_K_M",
-    "sentiments/llama3_8b-instruct-q5_K_M",
-    "sentiments/llama3_8b-instruct-q8_0",
-    "sentiments/llama3_8b-instruct-sentiment_analysis-fp16",
-    "sentiments/llama3_8b-instruct-sentiment_analysis-q4_K_M",
-    "sentiments/llama3_8b-instruct-sentiment_analysis-q5_K_M",
-    "sentiments/llama3_8b-instruct-sentiment_analysis-q8_0",
-    "sentiments/mistral_7b-instruct-fp16",
-    "sentiments/mistral_7b-instruct-q4_K_M",
-    "sentiments/mistral_7b-instruct-q5_K_M",
-    "sentiments/mistral_7b-instruct-q8_0",
-    "sentiments/dolphin-mistral_7b-v2.8-fp16",
-    "sentiments/dolphin-mistral_7b-v2.8-q4_K_M",
-    "sentiments/dolphin-mistral_7b-v2.8-q5_K_M",
-    "sentiments/dolphin-mistral_7b-v2.8-q8_0",
-]
+def main():
+    config = load_config(CONFIG_FILE)
+    models_to_test = config.get("models_to_test", [])
+    comparison_pairs = config.get("comparison_pairs", [])
+    sentiment_save_folder = config.get("sentiment_save_folder", "sentiments")
+    report_output_file = config.get(
+        "report_output_file", "reports/model_comparisons.xlsx"
+    )
+    report_output_csv_folder = config.get("report_output_csv_folder", "reports")
+    report_example_sample_size = config.get("report_example_sample_size", 5)
 
-# Load all data
-all_data = {
-    extract_model_name(path): extract_sentiments(load_json_files(path))
-    for path in model_dirs
-}
+    # Prepend sentiment_save_folder to each model path
+    model_paths = [
+        os.path.join(sentiment_save_folder, model.replace(":", "_"))
+        for model in models_to_test
+    ]
 
-# Compute metrics for all models
-model_metrics = {
-    model: compute_metrics(sentiments) for model, sentiments in all_data.items()
-}
+    # Load all data
+    all_data = {
+        extract_model_name(path): extract_sentiments(load_json_files(path))
+        for path in model_paths
+    }
 
-# Define pairs to compare
-comparison_pairs = [
-    ("llama3_8b-instruct-fp16", "llama3_8b-instruct-sentiment_analysis-fp16"),
-    ("llama3_8b-instruct-q4_K_M", "llama3_8b-instruct-sentiment_analysis-q4_K_M"),
-    ("llama3_8b-instruct-q5_K_M", "llama3_8b-instruct-sentiment_analysis-q5_K_M"),
-    ("llama3_8b-instruct-q8_0", "llama3_8b-instruct-sentiment_analysis-q8_0"),
-    ("mistral_7b-instruct-fp16", "llama3_8b-instruct-fp16"),
-    ("mistral_7b-instruct-q4_K_M", "llama3_8b-instruct-q4_K_M"),
-    ("mistral_7b-instruct-q5_K_M", "llama3_8b-instruct-q5_K_M"),
-    ("mistral_7b-instruct-q8_0", "llama3_8b-instruct-q8_0"),
-    ("dolphin-mistral_7b-v2.8-fp16", "mistral_7b-instruct-fp16"),
-    ("dolphin-mistral_7b-v2.8-q4_K_M", "mistral_7b-instruct-q4_K_M"),
-    ("dolphin-mistral_7b-v2.8-q5_K_M", "mistral_7b-instruct-q5_K_M"),
-    ("dolphin-mistral_7b-v2.8-q8_0", "mistral_7b-instruct-q8_0"),
-]
+    # Debugging: Print all_data keys
+    logging.info("Loaded model data keys:", all_data.keys())
 
-# Perform comparisons
-comparisons = {
-    f"{m1} vs {m2}": compare_models(all_data[m1], all_data[m2])
-    for m1, m2 in comparison_pairs
-}
+    # Compute metrics for all models
+    model_metrics = {
+        model: compute_metrics(sentiments, report_example_sample_size)
+        for model, sentiments in all_data.items()
+    }
 
-# Create spreadsheet
-create_spreadsheet(model_metrics, comparisons)
+    # Perform comparisons
+    comparisons = {}
+    for m1, m2 in comparison_pairs:
+        # Debugging: Print models being compared
+        logging.info(f"Comparing {m1} with {m2}")
+        try:
+            comparisons[f"{m1} vs {m2}"] = compare_models(all_data[m1], all_data[m2])
+        except KeyError as e:
+            logging.info(f"KeyError: {e} - One of the models not found in loaded data.")
+
+    # Create spreadsheet
+    create_spreadsheet(
+        model_metrics, comparisons, report_output_file, report_output_csv_folder
+    )
+
+
+if __name__ == "__main__":
+    main()

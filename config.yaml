@@ -1,22 +1,46 @@
 models_to_test:
   - 'llama3:8b-instruct-sentiment_analysis-q4_K_M'
-  - 'llama3:8b-instruct-sentiment_analysis-q5_k_m'
+  - 'llama3:8b-instruct-sentiment_analysis-q5_K_M'
   - 'llama3:8b-instruct-sentiment_analysis-q8_0'
   - 'llama3:8b-instruct-sentiment_analysis-fp16'
-  # - 'llama3:8b-instruct-q4_K_M'
-  # - 'llama3:8b-instruct-q5_K_M'
-  # - 'llama3:8b-instruct-q8_0'
-  # - 'llama3:8b-instruct-fp16'
-  # - 'mistral:7b-instruct-q4_K_M'
-  # - 'mistral:7b-instruct-q5_K_M'
-  # - 'mistral:7b-instruct-q8_0'
-  # - 'mistral:7b-instruct-fp16'
-  # - 'dolphin-mistral:7b-v2.8-q4_K_M'
+  - 'llama3:8b-instruct-q4_K_M'
+  - 'llama3:8b-instruct-q5_K_M'
+  - 'llama3:8b-instruct-q8_0'
+  - 'llama3:8b-instruct-fp16'
+  - 'mistral:7b-instruct-q4_K_M'
+  - 'mistral:7b-instruct-q5_K_M'
+  - 'mistral:7b-instruct-q8_0'
+  - 'mistral:7b-instruct-fp16'
+  - 'dolphin-mistral:7b-v2.8-q4_K_M'
   - 'dolphin-mistral:7b-v2.8-q5_K_M'
   - 'dolphin-mistral:7b-v2.8-q8_0'
   - 'dolphin-mistral:7b-v2.8-fp16'
 
-sample_size: 14
+comparison_pairs:
+  - ['llama3_8b-instruct-fp16', 'llama3_8b-instruct-sentiment_analysis-fp16']
+  - ['llama3_8b-instruct-q4_K_M', 'llama3_8b-instruct-sentiment_analysis-q4_K_M']
+  - ['llama3_8b-instruct-q5_K_M', 'llama3_8b-instruct-sentiment_analysis-q5_K_M']
+  - ['llama3_8b-instruct-q8_0', 'llama3_8b-instruct-sentiment_analysis-q8_0']
+  - ['mistral_7b-instruct-fp16', 'llama3_8b-instruct-fp16']
+  - ['mistral_7b-instruct-q4_K_M', 'llama3_8b-instruct-q4_K_M']
+  - ['mistral_7b-instruct-q5_K_M', 'llama3_8b-instruct-q5_K_M']
+  - ['mistral_7b-instruct-q8_0', 'llama3_8b-instruct-q8_0']
+  - ['dolphin-mistral_7b-v2.8-fp16', 'mistral_7b-instruct-fp16']
+  - ['dolphin-mistral_7b-v2.8-q4_K_M', 'mistral_7b-instruct-q4_K_M']
+  - ['dolphin-mistral_7b-v2.8-q5_K_M', 'mistral_7b-instruct-q5_K_M']
+  - ['dolphin-mistral_7b-v2.8-q8_0', 'mistral_7b-instruct-q8_0']
+
+sentiment_save_folder: 'sentiments'
+
+sample_size: 2
+report_example_sample_size: 5
 ticker_symbol: 'NVDA'
 max_news_age: 1
 max_news_items: 8
+
+report_output_file: 'reports/model_comparisons.xlsx'
+report_output_csv_folder: 'reports'
+
+default_temperature: 0.2
+context_window_size: 8192
+num_tokens_to_predict: 1024

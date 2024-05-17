@@ -2,34 +2,21 @@ import hashlib
 import logging
 import os
 import time
-from dataclasses import dataclass
 from datetime import datetime, timedelta
 from typing import Any, Dict, List
 
 from langchain_community.llms import Ollama
 
+from utils.context import AnalysisContext
 from utils.error_decorator import handle_errors
 from utils.file_utils import (
-    ensure_directory_exists,
     get_file_content,
-    get_results_directory,
     save_json_to_file,
 )
 from utils.validation_utils import (
     parse_json_numeric_value,
     validate_json,
 )
-
-SENTIMENTS_DIR = "sentiments"
-
-
-@dataclass
-class AnalysisContext:
-    content_map: Dict[str, str]
-    company_name: str
-    news_object: List[Dict[str, Any]]
-    ticker_symbol: str
-
 
 COMMON_SUFFIXES: List[str] = [
     "inc.",
@@ -42,11 +29,6 @@ COMMON_SUFFIXES: List[str] = [
     "company",
 ]
 
-DEFAULT_TEMPERATURE = 0.2
-CONTEXT_WINDOW_SIZE = 8192
-NUM_TOKENS_TO_PREDICT = (
-    1024  # Default: 128, -1 = infinite generation, -2 = fill context
-)
 DUMMY_PROMPT = "Hello"
 
 
@@ -88,13 +70,36 @@ def test_models(
         logging.info("")
 
 
+def initialize_llm(
+    model_name: str,
+    default_temperature: float,
+    context_window_size: int,
+    num_tokens_to_predict: int,
+) -> Ollama:
+    return Ollama(
+        model=model_name,
+        temperature=default_temperature,
+        num_ctx=context_window_size,
+        num_predict=num_tokens_to_predict,
+    )
+
+
+def pre_warm_model(llm: Ollama, dummy_prompt: str = DUMMY_PROMPT) -> None:
+    llm.invoke(dummy_prompt)
+
+
 def test_model(
     model_name: str,
     iteration: int,
     context: AnalysisContext,
 ):
     start_time = time.time()
-    llm = initialize_llm(model_name)
+    llm = initialize_llm(
+        model_name,
+        context.default_temperature,
+        context.context_window_size,
+        context.num_tokens_to_predict,
+    )
 
     # Pre-warm the model
     pre_warm_model(llm)
@@ -104,9 +109,11 @@ def test_model(
     sentiments_map = analyze_content(
         llm,
         analyze_prompt,
-        context,
         model_name,
         iteration,
+        context.content_map,
+        context.company_name,
+        context.news_object,
     )
 
     average_sentiment = compute_weighted_average_sentiment(sentiments_map)
@@ -115,6 +122,7 @@ def test_model(
 
     save_results(
         model_name,
+        context.sentiment_save_folder,
         context.ticker_symbol,
         iteration,
         average_sentiment,
@@ -125,14 +133,17 @@ def test_model(
 
 def save_results(
     model_name: str,
+    sentiment_save_folder: str,
     ticker_symbol: str,
     iteration: int,
     average_sentiment: float,
     time_taken: float,
     sentiments_map: Dict[str, Any],
 ) -> None:
-    results_dir = get_results_directory(model_name, directory=SENTIMENTS_DIR)
-    ensure_directory_exists(results_dir)
+    results_dir = os.path.join(sentiment_save_folder, model_name.replace(":", "_"))
+    if not os.path.exists(results_dir):
+        os.makedirs(results_dir)
+        logging.info(f"Created directory: {results_dir}")
 
     sentiment_file = os.path.join(results_dir, ticker_symbol + f"_{iteration}.json")
     data = {
@@ -146,38 +157,25 @@ def save_results(
 def analyze_content(
     llm: Ollama,
     analyze_prompt: str,
-    context: AnalysisContext,
     model_name: str,
     iteration: int,
+    content_map: Dict[str, str],
+    company_name: str,
+    news_object: List[Dict[str, Any]],
 ) -> Dict[str, Dict[str, Any]]:
     sentiments_map = {}
     is_sentiment_model = "sentiment" in model_name
 
-    for j, (url, content) in enumerate(context.content_map.items()):
+    for j, (url, content) in enumerate(content_map.items()):
         prompt = format_prompt(
-            is_sentiment_model, analyze_prompt, content, context.company_name
+            is_sentiment_model, analyze_prompt, content, company_name
         )
 
-        logging.info(
-            f"Iteration: {iteration + 1}, item: {j + 1}/{len(context.content_map)}"
-        )
-        sentiment_json = process_content(llm, prompt, url, context.news_object)
+        logging.info(f"Iteration: {iteration + 1}, item: {j + 1}/{len(content_map)}")
+        sentiment_json = process_content(llm, prompt, url, news_object)
         if sentiment_json:
             sentiments_map[hash_url(url)] = sentiment_json
     return sentiments_map
-
-
-def initialize_llm(model_name: str) -> Ollama:
-    return Ollama(
-        model=model_name,
-        temperature=DEFAULT_TEMPERATURE,
-        num_ctx=CONTEXT_WINDOW_SIZE,
-        num_predict=NUM_TOKENS_TO_PREDICT,
-    )
-
-
-def pre_warm_model(llm: Ollama, dummy_prompt: str = DUMMY_PROMPT) -> None:
-    llm.invoke(dummy_prompt)
 
 
 def prepare_analyze_prompt(llm: Ollama, model_name: str) -> str:

@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import logging
 from functools import lru_cache
 
@@ -7,18 +6,19 @@ import requests_cache
 import yfinance as yf
 
 from utils.analysis_utils import (
-    AnalysisContext,
     clean_company_name,
     filter_recent_news,
     test_models,
 )
+from utils.context import AnalysisContext
 from utils.error_decorator import handle_errors
 from utils.file_utils import (
     load_config,
 )
 from utils.web_scraper import get_content
 
-# Configure logging
+CONFIG_FILE = "config.yaml"
+
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
 )
@@ -64,30 +64,45 @@ def get_content_map(news_object: list, company_name: str, ticker_symbol: str) ->
 
 @handle_errors(False)
 def log_company_info(company_name: str, ticker_symbol: str) -> bool:
-    if not company_name or not ticker_symbol:
-        raise ValueError("Invalid company name or ticker symbol.")
     logging.info(f"Company: {company_name} ({ticker_symbol})")
     return True
 
 
 def main():
-    config = load_config("config.yaml")
-    company_name = get_company_name(config["ticker_symbol"])
+    config = load_config(CONFIG_FILE)
+    ticker_symbol = config.get("ticker_symbol")
+    company_name = get_company_name(ticker_symbol)
+    max_news_age = config.get("max_news_age", 1)
+    max_news_items = config.get("max_news_items", 5)
+    models_to_test = config.get("models_to_test", [])
+    sample_size = config.get("sample_size", 5)
+    default_temperature = config.get("default_temperature", 0.2)
+    context_window_size = config.get("context_window_size", 8192)
+    num_tokens_to_predict = config.get("num_tokens_to_predict", 1024)
+    sentiment_save_folder = config.get("sentiment_save_folder", "sentiments")
 
-    log_company_info(company_name, config["ticker_symbol"])
+    if not company_name or not ticker_symbol:
+        raise ValueError("Invalid company name or ticker symbol.")
 
-    news_object = get_news(
-        config["ticker_symbol"], config["max_news_age"], config["max_news_items"]
-    )
-    content_map = get_content_map(news_object, company_name, config["ticker_symbol"])
+    if len(models_to_test) == 0:
+        raise ValueError("No models to test.")
+
+    log_company_info(company_name, ticker_symbol)
+
+    news_object = get_news(ticker_symbol, max_news_age, max_news_items)
+    content_map = get_content_map(news_object, company_name, ticker_symbol)
 
     context = AnalysisContext(
         content_map=content_map,
         company_name=company_name,
         news_object=news_object,
-        ticker_symbol=config["ticker_symbol"],
+        ticker_symbol=ticker_symbol,
+        default_temperature=default_temperature,
+        context_window_size=context_window_size,
+        num_tokens_to_predict=num_tokens_to_predict,
+        sentiment_save_folder=sentiment_save_folder,
     )
-    test_models(config["models_to_test"], config["sample_size"], context)
+    test_models(models_to_test, sample_size, context)
 
 
 if __name__ == "__main__":
