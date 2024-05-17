@@ -12,6 +12,8 @@ from utils.file_utils import (
 )
 
 CONFIG_FILE = "config.yaml"
+INCLUDE_REASONING_SAMPLES = False
+DECIMAL_PLACES = 3
 
 logging.basicConfig(
     level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
@@ -48,17 +50,22 @@ def compute_metrics(sentiments: list, report_example_sample_size: int) -> dict:
     variance = np.var(sentiment_scores)
     mean_sentiment = np.mean(sentiment_scores)
     mean_confidence = np.mean(confidence_scores)
-    reasoning_samples = [
-        s["reasoning"] for s in valid_sentiments[:report_example_sample_size]
-    ]  # Take the first n reasonings as sample / report_example_sample_size
-    return {
-        "rate": rate,
-        "valid_json_rate": valid_json_rate,
-        "variance": variance,
-        "mean_sentiment": mean_sentiment,
-        "mean_confidence": mean_confidence,
-        "reasoning_samples": reasoning_samples,
+
+    metrics = {
+        "rate": round(rate, DECIMAL_PLACES),
+        "valid_json_rate": round(valid_json_rate, DECIMAL_PLACES),
+        "variance": round(variance, DECIMAL_PLACES),
+        "mean_sentiment": round(mean_sentiment, DECIMAL_PLACES),
+        "mean_confidence": round(mean_confidence, DECIMAL_PLACES),
     }
+
+    if INCLUDE_REASONING_SAMPLES:
+        reasoning_samples = [
+            s["reasoning"] for s in valid_sentiments[:report_example_sample_size]
+        ]
+        metrics["reasoning_samples"] = reasoning_samples
+
+    return metrics
 
 
 def compare_models(model1_sentiments: list, model2_sentiments: list) -> dict:
@@ -68,10 +75,10 @@ def compare_models(model1_sentiments: list, model2_sentiments: list) -> dict:
     mean_test: TtestResult = ttest_ind(sentiments1, sentiments2)
 
     return {
-        "f_statistic": variance_test.statistic,
-        "f_p_value": variance_test.pvalue,
-        "t_statistic": mean_test.statistic,  # type: ignore
-        "t_p_value": mean_test.pvalue,  # type: ignore
+        "f_statistic": round(variance_test.statistic, DECIMAL_PLACES),
+        "f_p_value": round(variance_test.pvalue, DECIMAL_PLACES),
+        "t_statistic": round(mean_test.statistic, DECIMAL_PLACES),  # type: ignore
+        "t_p_value": round(mean_test.pvalue, DECIMAL_PLACES),  # type: ignore
     }
 
 
@@ -85,12 +92,16 @@ def create_spreadsheet(
     writer = pd.ExcelWriter(output_file, engine="xlsxwriter")
 
     # Model Details Sheet
-    model_details = pd.DataFrame(
-        [
-            {"Model Name": model, "Quantization Level": model.split("-")[-1], **metrics}
-            for model, metrics in model_metrics.items()
-        ]
-    )
+    model_details_data = [
+        {"Model Name": model, "Quantization Level": model.split("-")[-1], **metrics}
+        for model, metrics in model_metrics.items()
+    ]
+
+    if not INCLUDE_REASONING_SAMPLES:
+        for data in model_details_data:
+            data.pop("reasoning_samples", None)
+
+    model_details = pd.DataFrame(model_details_data)
     model_details.to_excel(writer, sheet_name="Model Details", index=False)
     model_details.to_csv(
         os.path.join(output_csv_folder, "model_details.csv"), index=False
