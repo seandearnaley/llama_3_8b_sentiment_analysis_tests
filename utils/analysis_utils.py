@@ -43,7 +43,10 @@ COMMON_SUFFIXES: List[str] = [
 ]
 
 DEFAULT_TEMPERATURE = 0.2
-
+CONTEXT_WINDOW_SIZE = 8192
+NUM_TOKENS_TO_PREDICT = (
+    1024  # Default: 128, -1 = infinite generation, -2 = fill context
+)
 DUMMY_PROMPT = "Hello"
 
 
@@ -165,7 +168,12 @@ def analyze_content(
 
 
 def initialize_llm(model_name: str) -> Ollama:
-    return Ollama(model=model_name, temperature=DEFAULT_TEMPERATURE)
+    return Ollama(
+        model=model_name,
+        temperature=DEFAULT_TEMPERATURE,
+        num_ctx=CONTEXT_WINDOW_SIZE,
+        num_predict=NUM_TOKENS_TO_PREDICT,
+    )
 
 
 def pre_warm_model(llm: Ollama, dummy_prompt: str = DUMMY_PROMPT) -> None:

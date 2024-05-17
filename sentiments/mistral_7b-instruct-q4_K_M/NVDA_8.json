@@ -1,0 +1,69 @@
+{
+  "average_sentiment": 0.46,
+  "time_taken": 39.32,
+  "sentiments": {
+    "91ba90ac": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative words and phrases. The presence of positive keywords such as 'market rally', 'record highs', 'buy signals', and 'Nvidia' indicates a positive sentiment towards the potential short-term stock value of Nvidia.",
+      "sentiment": 0.75,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/ae28caa6-3ead-3745-aece-9ddb64e2ea1d/dow-jones-futures%3A-walmart%2C.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 21:29:02 +0000",
+      "time_taken": 3.53
+    },
+    "bf372e87": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/m/6ab7d488-38e1-3ef1-beef-bf75a726d6c2/nvidia-stock-couldn%E2%80%99t-close.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:30:00 +0000",
+      "time_taken": 2.81
+    },
+    "d4c4ccc1": {
+      "reasoning": "The sentiment analysis was performed using natural language processing techniques to identify positive and negative words in the article. The sentiment value was calculated based on the ratio of positive to negative words.",
+      "sentiment": 0.5,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/chip-stocks-wolfe-research-bullish-201319388.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:13:19 +0000",
+      "time_taken": 3.78
+    },
+    "30176a40": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/m/26c4c355-4c17-3878-9935-b7ea9ff2b1d6/who-needs-nvidia%3F-top-funds.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:06:03 +0000",
+      "time_taken": 2.74
+    },
+    "4308627f": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/m/e585b34d-fb68-3db1-a53f-e6cb7ec2c2b9/nvidia-dethroned%3A-this-ai.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:00:28 +0000",
+      "time_taken": 2.86
+    },
+    "0e0b8975": {
+      "reasoning": "The sentiment analysis was performed on the given article using natural language processing techniques. The article discusses the upcoming earnings report of Nvidia and its expected positive impact on the stock market. The article also highlights the company's cutting-edge graphics processing units (GPUs) and their role in powering the AI revolution. Additionally, the article mentions Zacks Rank #1 (Strong Buy) stock Nvidia and its recent growth. Based on this information, the sentiment analysis was performed to determine the potential short-term stock value of Nvidia.",
+      "sentiment": 0.85,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidia-earnings-superbowl-ai-video-195000985.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 19:50:00 +0000",
+      "time_taken": 5.95
+    },
+    "ce972942": {
+      "reasoning": "The sentiment analysis is based on the comparison of the performance of the Magnificent Seven stocks in 2023 and the early part of the second quarter of 2024. The article mentions that all seven stocks had big gains in 2023, but in the early part of the second quarter of 2024, there was a big divergence of returns. This suggests that the performance of Nvidia may have been negatively impacted in the early part of the second quarter of 2024 compared to the other Magnificent Seven stocks.",
+      "sentiment": -0.5,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 17:26:42 +0000",
+      "time_taken": 5.4
+    },
+    "6c3dee93": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article to determine if it contained positive or negative language related to the potential short-term stock value of Nvidia. The reasoning used included identifying any mentions of the company's performance, growth prospects, and leadership position in its industry.",
+      "sentiment": 0.54,
+      "confidence": 0.92,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/t-mobile-tmus-5g-enhance-163200864.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 16:32:00 +0000",
+      "time_taken": 4.71
+    }
+  }
+}

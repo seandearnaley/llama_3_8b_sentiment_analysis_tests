@@ -1,0 +1,78 @@
+{
+  "average_sentiment": 0.49,
+  "time_taken": 34.19,
+  "sentiments": {
+    "91ba90ac": {
+      "reasoning": "The article mentions that Nvidia is flashing a buy signal, which is typically considered a positive indicator for the stock's potential short-term value.",
+      "sentiment": 0.82,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/ae28caa6-3ead-3745-aece-9ddb64e2ea1d/dow-jones-futures%3A-walmart%2C.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 21:29:02 +0000",
+      "time_taken": 2.2
+    },
+    "bf372e87": {
+      "reasoning": "The article discusses Nvidia's stock performance, which finished lower despite being on track to set a record high due to optimism around its upcoming earnings report. The marketwide rally sparked by April's inflation data and upbeat analyst estimates contributed to the positive sentiment.",
+      "sentiment": 0.42,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/6ab7d488-38e1-3ef1-beef-bf75a726d6c2/nvidia-stock-couldn%E2%80%99t-close.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:30:00 +0000",
+      "time_taken": 3.2
+    },
+    "d4c4ccc1": {
+      "reasoning": "The article discusses Wolfe Research's reiteration of its Outperform rating on Nvidia and raising its price target to $1,200, citing the chipmaker's robust AI product lineup. The analysts also added AMD to their Wolfe Alpha List, expecting big performance from both stocks.",
+      "sentiment": 0.83,
+      "confidence": 0.92,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/chip-stocks-wolfe-research-bullish-201319388.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:13:19 +0000",
+      "time_taken": 4.28
+    },
+    "30176a40": {
+      "reasoning": "The article mentions that Nvidia's stock is going 'AWOL', which implies a negative trend in its short-term value. However, the same article also highlights Core & Main's (CNM) stock being lifted into a buy zone due to demand from top funds. This mixed sentiment towards Nvidia's stock value leads to a neutral overall sentiment.",
+      "sentiment": 0.0,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/26c4c355-4c17-3878-9935-b7ea9ff2b1d6/who-needs-nvidia%3F-top-funds.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:06:03 +0000",
+      "time_taken": 3.59
+    },
+    "4308627f": {
+      "reasoning": "The article mentions that Broadcom has taken over the top spot from Nvidia in a list of new buys by the best mutual funds, implying a negative sentiment towards Nvidia's stock value.",
+      "sentiment": -0.83,
+      "confidence": 0.92,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/e585b34d-fb68-3db1-a53f-e6cb7ec2c2b9/nvidia-dethroned%3A-this-ai.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:00:28 +0000",
+      "time_taken": 2.28
+    },
+    "0e0b8975": {
+      "reasoning": "The article is highly optimistic about Nvidia's earnings report, citing its strong performance over the past year and its potential to continue growing due to its cutting-edge technology. The author highlights three key items to watch during the earnings call, including the company's latest chip and any commentary on the earnings conference call.",
+      "sentiment": 0.92,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidia-earnings-superbowl-ai-video-195000985.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 19:50:00 +0000",
+      "time_taken": 4.04
+    },
+    "ce972942": {
+      "reasoning": "The article mentions that Nvidia was one of the Magnificent Seven stocks that had big gains in 2023, but then shows a divergence of returns in the early part of the second quarter of 2024. This implies that the author is neutral about Nvidia's short-term stock value, as they are not making any specific predictions or expressing strong opinions.",
+      "sentiment": 0.0,
+      "confidence": 0.75,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 17:26:42 +0000",
+      "time_taken": 3.7
+    },
+    "6c3dee93": {
+      "reasoning": "The article discusses the positive performance of NVIDIA Corporation (NVDA), highlighting its strong earnings surprise history, Zacks Rank #1 (Strong Buy), and leadership in visual computing technologies. The mention of other companies with similar strong performances, such as Arista Networks (ANET) and Silicon Motion Technology (SIMO), further reinforces a positive sentiment towards NVDA.",
+      "sentiment": 0.83,
+      "confidence": 0.92,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/t-mobile-tmus-5g-enhance-163200864.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 16:32:00 +0000",
+      "time_taken": 5.05
+    }
+  }
+}

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>3D Data Cube Visualization</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    canvas {
+      display: block;
+    }
+  </style>
+</head>
+
+<body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.16.0/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/110/three.min.js"></script>
+
+  <script>
+    // Load the transformed data
+    d3.json('transformed_data.json').then(data => {
+      // Basic setup for THREE.js scene
+      const scene = new THREE.Scene();
+      const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+      const renderer = new THREE.WebGLRenderer({ antialias: true });
+      renderer.setSize(window.innerWidth, window.innerHeight);
+      document.body.appendChild(renderer.domElement);
+
+      // Create data points
+      data.forEach(d => {
+        const geometry = new THREE.SphereGeometry(0.05, 32, 32);
+        const material = new THREE.MeshBasicMaterial({ color: d.valid ? 0x00ff00 : 0xff0000 });
+        const sphere = new THREE.Mesh(geometry, material);
+        sphere.position.set(
+          parseFloat(d.average_sentiment) * 5,
+          parseFloat(d.time_taken) / 10,
+          parseFloat(d.sentiment) * 5
+        );
+        scene.add(sphere);
+      });
+
+      // Add labels for models
+      const models = Array.from(new Set(data.map(d => d.model)));
+      models.forEach((model, index) => {
+        const loader = new THREE.FontLoader();
+        loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (font) {
+          const textGeometry = new THREE.TextGeometry(model, {
+            font: font,
+            size: 0.2,
+            height: 0.05,
+          });
+          const textMaterial = new THREE.MeshBasicMaterial({ color: 0xffffff });
+          const textMesh = new THREE.Mesh(textGeometry, textMaterial);
+          textMesh.position.set(0, index - models.length / 2, 0);
+          scene.add(textMesh);
+        });
+      });
+
+      camera.position.z = 10;
+
+      const animate = function () {
+        requestAnimationFrame(animate);
+        scene.rotation.x += 0.01;
+        scene.rotation.y += 0.01;
+        renderer.render(scene, camera);
+      };
+
+      animate();
+
+      // Handle window resize
+      window.addEventListener('resize', () => {
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+      });
+    });
+  </script>
+</body>
+
+</html>

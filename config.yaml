@@ -3,12 +3,20 @@ models_to_test:
   - 'llama3:8b-instruct-sentiment_analysis-q5_k_m'
   - 'llama3:8b-instruct-sentiment_analysis-q8_0'
   - 'llama3:8b-instruct-sentiment_analysis-fp16'
-  - 'llama3:8b-instruct-q4_K_M'
-  - 'llama3:8b-instruct-q5_K_M'
-  - 'llama3:8b-instruct-q8_0'
-  - 'llama3:8b-instruct-fp16'
+  # - 'llama3:8b-instruct-q4_K_M'
+  # - 'llama3:8b-instruct-q5_K_M'
+  # - 'llama3:8b-instruct-q8_0'
+  # - 'llama3:8b-instruct-fp16'
+  # - 'mistral:7b-instruct-q4_K_M'
+  # - 'mistral:7b-instruct-q5_K_M'
+  # - 'mistral:7b-instruct-q8_0'
+  # - 'mistral:7b-instruct-fp16'
+  # - 'dolphin-mistral:7b-v2.8-q4_K_M'
+  - 'dolphin-mistral:7b-v2.8-q5_K_M'
+  - 'dolphin-mistral:7b-v2.8-q8_0'
+  - 'dolphin-mistral:7b-v2.8-fp16'
 
-sample_size: 8
+sample_size: 14
 ticker_symbol: 'NVDA'
 max_news_age: 1
 max_news_items: 8

@@ -1,0 +1,72 @@
+{
+  "average_sentiment": 0.23,
+  "time_taken": 38.49,
+  "sentiments": {
+    "91ba90ac": {
+      "reasoning": "The sentiment analysis is based on the presence of positive keywords such as 'market rally', 'record highs', 'buy signals', and 'Nvidia'. The absence of negative keywords suggests a positive outlook for Nvidia's potential short-term stock value.",
+      "sentiment": 0.6,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/ae28caa6-3ead-3745-aece-9ddb64e2ea1d/dow-jones-futures%3A-walmart%2C.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 21:29:02 +0000",
+      "time_taken": 3.18
+    },
+    "bf372e87": {
+      "reasoning": "The sentiment analysis was performed using natural language processing techniques to identify positive and negative words in the article. The sentiment value was calculated based on the ratio of positive to negative words.",
+      "sentiment": -0.1,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/6ab7d488-38e1-3ef1-beef-bf75a726d6c2/nvidia-stock-couldn%E2%80%99t-close.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:30:00 +0000",
+      "time_taken": 2.91
+    },
+    "d4c4ccc1": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/video/chip-stocks-wolfe-research-bullish-201319388.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:13:19 +0000",
+      "time_taken": 4.14
+    },
+    "30176a40": {
+      "reasoning": "The sentiment analysis is based on the presence of positive and negative keywords in the article. The positive keywords include 'Core & Main', 'demand', 'lifting', and 'buy zone'. The negative keyword is 'AWOL' which stands for absent without leave, indicating that Nvidia stocks are not performing well.",
+      "sentiment": 0.52,
+      "confidence": 0.87,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/26c4c355-4c17-3878-9935-b7ea9ff2b1d6/who-needs-nvidia%3F-top-funds.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:06:03 +0000",
+      "time_taken": 3.46
+    },
+    "4308627f": {
+      "reasoning": "The sentiment analysis is based on the presence of positive and negative words in the article. The article mentions 'Broadcom' and 'usurping', which are negative words, while it also mentions 'best mutual funds', which are positive words. Therefore, the sentiment value is calculated as follows: (number of positive words - number of negative words) / total number of words = (-1 - 1) / 3 = -0.67.",
+      "sentiment": -0.67,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/e585b34d-fb68-3db1-a53f-e6cb7ec2c2b9/nvidia-dethroned%3A-this-ai.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:00:28 +0000",
+      "time_taken": 4.33
+    },
+    "0e0b8975": {
+      "reasoning": "The sentiment analysis is based on a combination of factors such as the anticipation surrounding the earnings report, the positive impact of Nvidia's cutting-edge graphics processing units on the AI revolution and stock performance, the high expectations for quarterly earnings growth, the positive impact of new technology on cost and energy consumption, the potential bullish catalyst from Blackwell's commentary, and the potential impact of Chinese regulators on the company's outlook. The sentiment analysis is performed using natural language processing techniques to identify and extract relevant keywords and phrases from the article.",
+      "sentiment": 0.75,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidia-earnings-superbowl-ai-video-195000985.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 19:50:00 +0000",
+      "time_taken": 6.01
+    },
+    "ce972942": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 17:26:42 +0000",
+      "time_taken": 2.57
+    },
+    "6c3dee93": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article to determine if it contains positive or negative language related to the potential short-term stock value of Nvidia. The Zacks Rank and earnings surprise information were also taken into account.",
+      "sentiment": 0.4,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/t-mobile-tmus-5g-enhance-163200864.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 16:32:00 +0000",
+      "time_taken": 4.28
+    }
+  }
+}

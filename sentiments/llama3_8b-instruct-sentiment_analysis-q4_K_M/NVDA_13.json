@@ -1,0 +1,78 @@
+{
+  "average_sentiment": 0.56,
+  "time_taken": 29.29,
+  "sentiments": {
+    "91ba90ac": {
+      "reasoning": "The article reports that the market is holding near record highs, with several companies flashing 'buy' signals, including Walmart rival BYD and Nvidia. This suggests a positive sentiment towards these companies' stock values.",
+      "sentiment": 0.6,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/ae28caa6-3ead-3745-aece-9ddb64e2ea1d/dow-jones-futures%3A-walmart%2C.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 23:52:02 +0000",
+      "time_taken": 2.37
+    },
+    "bf372e87": {
+      "reasoning": "The article reports that Nvidia's stock finished lower on Thursday, despite being on track to set a record high due to rising optimism around the chip maker ahead of its earnings report. The marketwide rally sparked by April's inflation data and upbeat analyst estimates also contributed to the lift in Nvidia shares.",
+      "sentiment": 0.2,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/6ab7d488-38e1-3ef1-beef-bf75a726d6c2/nvidia-stock-couldn%E2%80%99t-close.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:30:00 +0000",
+      "time_taken": 3.34
+    },
+    "d4c4ccc1": {
+      "reasoning": "The article reports that Wolfe Research has reiterated its Outperform rating on Nvidia and Advanced Micro Devices, with a price target increase for Nvidia to $1,200. Additionally, AMD was added to the Wolfe Alpha List due to its robust AI product lineup. The analysts' positive sentiment towards both companies suggests increased confidence in their future performance.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/chip-stocks-wolfe-research-bullish-201319388.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:13:19 +0000",
+      "time_taken": 4.44
+    },
+    "30176a40": {
+      "reasoning": "The article suggests that despite other Mag 7 stocks experiencing volatility (e.g., Nvidia), Core & Main is seeing continued demand from top funds, leading to a further increase in CNM stock value.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/26c4c355-4c17-3878-9935-b7ea9ff2b1d6/who-needs-nvidia%3F-top-funds.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:06:03 +0000",
+      "time_taken": 2.43
+    },
+    "4308627f": {
+      "reasoning": "The article suggests that Broadcom has surpassed Nvidia as the top stock in a list of new buys by the best mutual funds, implying a positive sentiment towards Broadcom's future stock value.",
+      "sentiment": 0.6,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/e585b34d-fb68-3db1-a53f-e6cb7ec2c2b9/nvidia-dethroned%3A-this-ai.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:00:28 +0000",
+      "time_taken": 2.17
+    },
+    "0e0b8975": {
+      "reasoning": "The article presents a positive outlook on Nvidia's earnings report, highlighting its significant growth and market capitalization over the past year. The mention of Nvidia's cutting-edge graphics processing units powering the AI revolution and its expected explosive quarterly earnings growth by 406% further supports a positive sentiment.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidia-earnings-superbowl-ai-video-195000985.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 19:50:00 +0000",
+      "time_taken": 3.72
+    },
+    "ce972942": {
+      "reasoning": "The article discusses the Magnificent Seven stocks, which include Apple, Microsoft, Google parent Alphabet, Amazon, Nvidia, Meta Platforms, and Tesla, and how they performed in 2023 with significant gains. However, it also mentions that there was a big divergence of returns in the early part of the second quarter of 2024, indicating a potential slowdown or uneven performance among these stocks.",
+      "sentiment": -0.2,
+      "confidence": 0.6,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 17:26:42 +0000",
+      "time_taken": 3.83
+    },
+    "6c3dee93": {
+      "reasoning": "The article discusses the positive impact of T-Mobile's (TMUS) 5G technology on rural healthcare access through Doppl Technology. Additionally, it highlights NVIDIA Corporation NVDA as a strong buy with a trailing four-quarter average earnings surprise of 20.18%. The article also mentions Arista Networks, Inc. ANET and Silicon Motion Technology Corporation SIMO as companies with positive growth expectations and recent earnings surprises.",
+      "sentiment": 0.6,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/t-mobile-tmus-5g-enhance-163200864.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 16:32:00 +0000",
+      "time_taken": 5.13
+    }
+  }
+}

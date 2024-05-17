@@ -113,6 +113,14 @@ model_dirs = [
     "sentiments/llama3_8b-instruct-sentiment_analysis-q4_K_M",
     "sentiments/llama3_8b-instruct-sentiment_analysis-q5_K_M",
     "sentiments/llama3_8b-instruct-sentiment_analysis-q8_0",
+    "sentiments/mistral_7b-instruct-fp16",
+    "sentiments/mistral_7b-instruct-q4_K_M",
+    "sentiments/mistral_7b-instruct-q5_K_M",
+    "sentiments/mistral_7b-instruct-q8_0",
+    "sentiments/dolphin-mistral_7b-v2.8-fp16",
+    "sentiments/dolphin-mistral_7b-v2.8-q4_K_M",
+    "sentiments/dolphin-mistral_7b-v2.8-q5_K_M",
+    "sentiments/dolphin-mistral_7b-v2.8-q8_0",
 ]
 
 # Load all data
@@ -132,6 +140,14 @@ comparison_pairs = [
     ("llama3_8b-instruct-q4_K_M", "llama3_8b-instruct-sentiment_analysis-q4_K_M"),
     ("llama3_8b-instruct-q5_K_M", "llama3_8b-instruct-sentiment_analysis-q5_K_M"),
     ("llama3_8b-instruct-q8_0", "llama3_8b-instruct-sentiment_analysis-q8_0"),
+    ("mistral_7b-instruct-fp16", "llama3_8b-instruct-fp16"),
+    ("mistral_7b-instruct-q4_K_M", "llama3_8b-instruct-q4_K_M"),
+    ("mistral_7b-instruct-q5_K_M", "llama3_8b-instruct-q5_K_M"),
+    ("mistral_7b-instruct-q8_0", "llama3_8b-instruct-q8_0"),
+    ("dolphin-mistral_7b-v2.8-fp16", "mistral_7b-instruct-fp16"),
+    ("dolphin-mistral_7b-v2.8-q4_K_M", "mistral_7b-instruct-q4_K_M"),
+    ("dolphin-mistral_7b-v2.8-q5_K_M", "mistral_7b-instruct-q5_K_M"),
+    ("dolphin-mistral_7b-v2.8-q8_0", "mistral_7b-instruct-q8_0"),
 ]
 
 # Perform comparisons

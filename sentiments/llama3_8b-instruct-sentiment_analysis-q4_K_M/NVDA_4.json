@@ -1,78 +1,78 @@
 {
-  "average_sentiment": 0.16,
-  "time_taken": 23.48,
+  "average_sentiment": 0.48,
+  "time_taken": 31.34,
   "sentiments": {
-    "98d34f1a": {
-      "reasoning": "The article reports a record high in copper prices, which has led to a significant gain of around 30% in 2024, driving up the stock value of top copper mining companies Newmont and Freeport-McMoRan.",
-      "sentiment": 0.8,
-      "confidence": 0.9,
-      "valid": true,
-      "url": "https://finance.yahoo.com/m/4c3284f6-3131-35db-9ceb-08a5d3abbeaa/copper-prices-have-surged-30%25.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 20:05:19 +0000",
-      "time_taken": 2.72
-    },
-    "ec88070b": {
-      "reasoning": "The sentiment is negative based on the financial context of the sentence.",
-      "sentiment": -1.0,
-      "confidence": 0.6,
-      "valid": true,
-      "url": "https://finance.yahoo.com/news/paul-tudor-jones-adjusts-portfolio-200123123.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 20:01:23 +0000",
-      "time_taken": 1.67
-    },
-    "50e2881b": {
-      "reasoning": "The article reports that Nvidia's shares are climbing due to KeyBanc Capital Markets' prediction of limited signs of a demand pause for the company. This boost is ahead of Nvidia's first quarter earnings, which are expected to top Wall Street estimates. The article also mentions that Nvidia is expected to dominate one of the fastest-growing workloads in cloud and enterprise, indicating a strong market position.",
-      "sentiment": 0.8,
-      "confidence": 0.9,
-      "valid": true,
-      "url": "https://finance.yahoo.com/video/nvidia-earnings-keybanc-capital-sees-194356782.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 19:43:56 +0000",
-      "time_taken": 4.35
-    },
-    "ce972942": {
-      "reasoning": "The article highlights a significant divergence in returns among the Magnificent Seven stocks (Apple, Microsoft, Alphabet, Amazon, Nvidia, Meta Platforms, and Tesla) in the early part of the second quarter of 2024. This suggests that not all these high-growth companies are performing equally well, which could lead to varying levels of investor confidence and potentially impact their stock values differently.",
-      "sentiment": -0.3,
-      "confidence": 0.75,
-      "valid": true,
-      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 19:22:42 +0000",
-      "time_taken": 3.75
-    },
-    "30590623": {
-      "reasoning": "The article mentions three companies: Nvidia's chipmaker Taiwan Semiconductor, Amazon, and Costco Wholesale. There is no explicit sentiment towards the future stock value of these companies, but the mention of them in a 'Screen Of The Day' suggests that they may be of interest to investors.",
-      "sentiment": 0.0,
-      "confidence": 0.5,
-      "valid": true,
-      "url": "https://finance.yahoo.com/m/5a9a15d2-14ee-3633-b8a6-7244daefbf18/funds-keep-buying-nvidia%27s.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 19:21:25 +0000",
-      "time_taken": 2.84
-    },
-    "e53b79e1": {
-      "reasoning": "The sentiment is neutral based on the financial context of the sentence.",
-      "sentiment": 0.0,
-      "confidence": 0.4,
-      "valid": true,
-      "url": "https://finance.yahoo.com/m/78b76766-5929-3c73-9e80-9ad1393ed591/nvidia-stock-rises.-this-is.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 18:58:00 +0000",
-      "time_taken": 1.42
-    },
-    "d8ae9755": {
-      "reasoning": "The article expresses a negative sentiment towards the performance of a specific tech ETF, implying that investors are not enthusiastic about investing in tech stocks due to their relatively low earnings growth forecasts compared to other indices like M7.",
-      "sentiment": -0.4,
-      "confidence": 0.8,
-      "valid": true,
-      "url": "https://finance.yahoo.com/m/4eaf9074-d599-3691-b4f0-708f5d98b496/a-major-tech-etf-is-lagging..html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 18:53:00 +0000",
-      "time_taken": 2.48
-    },
-    "edd5c12e": {
-      "reasoning": "The article reports a positive development for Nvidia, as its technology is featured in Google's AI conference, showcasing a new artificial intelligence application that will improve search. This suggests increased adoption and potential revenue growth for Nvidia.",
+    "91ba90ac": {
+      "reasoning": "The article reports that the market is holding near record highs, with several companies flashing 'buy' signals, including Walmart rival BYD and Nvidia. This suggests a positive sentiment towards these companies, which could lead to increased investor confidence and potentially higher stock values.",
       "sentiment": 0.6,
       "confidence": 0.8,
       "valid": true,
-      "url": "https://finance.yahoo.com/m/dc591aa5-8656-399f-a2b0-90fb4c8c329e/nvidia-surges-after-google-ai.html?.tsrc=rss",
-      "published": "Wed, 15 May 2024 17:39:22 +0000",
-      "time_taken": 2.38
+      "url": "https://finance.yahoo.com/m/ae28caa6-3ead-3745-aece-9ddb64e2ea1d/dow-jones-futures%3A-walmart%2C.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 23:52:02 +0000",
+      "time_taken": 2.69
+    },
+    "bf372e87": {
+      "reasoning": "The article reports that Nvidia's stock finished lower on Thursday, despite being on track to set a record high due to optimism around the chip maker ahead of its earnings report. The marketwide rally sparked by April's inflation data and upbeat analyst estimates lifted Nvidia shares, but ultimately led to a 0.3% decline in the stock price.",
+      "sentiment": -0.15,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/6ab7d488-38e1-3ef1-beef-bf75a726d6c2/nvidia-stock-couldn%E2%80%99t-close.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:30:00 +0000",
+      "time_taken": 3.7
+    },
+    "d4c4ccc1": {
+      "reasoning": "The article reports that Wolfe Research has reiterated its Outperform rating on Nvidia and Advanced Micro Devices, with a price target increase for Nvidia to $1,200. Additionally, AMD was added to the Wolfe Alpha List due to its robust AI product lineup. The analysts' positive outlook on both companies suggests increased confidence in their future performance.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/chip-stocks-wolfe-research-bullish-201319388.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:13:19 +0000",
+      "time_taken": 4.44
+    },
+    "30176a40": {
+      "reasoning": "The article suggests that despite other Mag 7 stocks experiencing a decline in value (e.g., Nvidia), Core & Main's stock (CNM) is seeing increased demand from top funds and has entered another buy zone, indicating a positive outlook for the company.",
+      "sentiment": 0.6,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/26c4c355-4c17-3878-9935-b7ea9ff2b1d6/who-needs-nvidia%3F-top-funds.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:06:03 +0000",
+      "time_taken": 2.82
+    },
+    "4308627f": {
+      "reasoning": "The article suggests that Broadcom has surpassed Nvidia in terms of being a popular buy among top-performing mutual funds, implying a positive sentiment towards Broadcom's stock value.",
+      "sentiment": 0.6,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/e585b34d-fb68-3db1-a53f-e6cb7ec2c2b9/nvidia-dethroned%3A-this-ai.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 20:00:28 +0000",
+      "time_taken": 2.07
+    },
+    "0e0b8975": {
+      "reasoning": "The article presents a highly positive view of Nvidia's upcoming earnings report, citing its strong performance over the past year and its market capitalization exceeding $2 trillion. The company's cutting-edge graphics processing units are driving the AI revolution, which is expected to positively impact the stock. The article highlights three key items to watch in Nvidia's earnings report: the explosion of quarterly earnings by 406%, the launch of a new chip that enables cost and energy savings, and the potential impact of Chinese regulators urging local tech firms to buy fewer Nvidia chips.",
+      "sentiment": 0.9,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidia-earnings-superbowl-ai-video-195000985.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 19:50:00 +0000",
+      "time_taken": 5.52
+    },
+    "ce972942": {
+      "reasoning": "The article mentions that the Magnificent Seven stocks (Apple, Microsoft, Alphabet, Amazon, Nvidia, Meta Platforms, and Tesla) had significant gains in 2023 but diverged in their returns during the early part of the second quarter of 2024. This divergence could indicate a potential shift in investor sentiment or market conditions, which may impact the stock values of these companies.",
+      "sentiment": -0.2,
+      "confidence": 0.6,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 17:26:42 +0000",
+      "time_taken": 3.74
+    },
+    "6c3dee93": {
+      "reasoning": "The article discusses the positive impact of T-Mobile's 5G technology on rural healthcare access, which is a neutral sentiment towards the company. The article also highlights NVIDIA's strong earnings performance and Arista Networks' leadership position in high-speed datacenter switching, indicating positive sentiments towards these companies.",
+      "sentiment": 0.4,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/t-mobile-tmus-5g-enhance-163200864.html?.tsrc=rss",
+      "published": "Thu, 16 May 2024 16:32:00 +0000",
+      "time_taken": 4.27
     }
   }
 }
