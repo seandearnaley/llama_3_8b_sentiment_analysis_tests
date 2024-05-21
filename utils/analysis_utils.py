@@ -213,7 +213,7 @@ def process_content(
     output = llm.invoke(prompt)
     time_taken = time.time() - start_time
 
-    valid, sentiment_json = validate_json(output)
+    valid, sentiment_json = validate_json(output.strip())
     sentiment_json.update(
         {
             "valid": valid,

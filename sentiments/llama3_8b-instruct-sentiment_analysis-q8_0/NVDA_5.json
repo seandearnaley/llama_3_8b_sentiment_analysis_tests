@@ -1,74 +1,74 @@
 {
-  "average_sentiment": 0.54,
-  "time_taken": 102.08,
+  "average_sentiment": 0.48,
+  "time_taken": 107.97,
   "sentiments": {
     "63f711be": {
-      "reasoning": "The article discusses Nvidia's upcoming earnings report, with the founder and CIO of Spear Invest expressing confidence in beating expectations. However, she also notes that the market may react negatively despite positive results due to recent trends of companies beating and raising expectations but still disappointing the market. The upside for Nvidia is seen as coming in the next two years as more data centers emerge and its chips are well-positioned for both training and inference.",
+      "reasoning": "The article discusses Nvidia's upcoming earnings report, with the founder and CIO of Spear Invest, Ivana Deleveska, expressing confidence in the company beating expectations. However, she also notes that the market often finds reported results disappointing, regardless of whether they beat or raise expectations. The upside for Nvidia is seen as coming in the next two years due to increased data center activity and its well-positioned chips for both training and inference.",
       "sentiment": 0.4,
-      "confidence": 0.75,
+      "confidence": 0.8,
       "valid": true,
       "url": "https://finance.yahoo.com/video/nvidia-earnings-impress-hard-please-212734404.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 21:27:34 +0000",
-      "time_taken": 7.37
+      "time_taken": 7.52
     },
     "1ed47412": {
-      "reasoning": "The article expresses uncertainty about Nvidia's ability to sustain its current upward trend, implying potential concerns or doubts among investors regarding the company's future performance.",
-      "sentiment": -0.2,
+      "reasoning": "The article expresses uncertainty about the future performance of Nvidia's stock, questioning whether it can sustain its current growth trajectory. This sentiment suggests that investors may be cautious in their investment decisions, potentially leading to a neutral or slightly negative impact on the stock value.",
+      "sentiment": -0.15,
       "confidence": 0.75,
       "valid": true,
       "url": "https://finance.yahoo.com/m/2b2f05dd-371a-3777-8304-e3ffa1f2b7f4/can-nvidia-stock-reach-the.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 21:25:41 +0000",
-      "time_taken": 2.78
+      "time_taken": 3.86
     },
     "5852d8b8": {
-      "reasoning": "The article reports a significant plunge in Palo Alto Networks' stock price following their earnings report, indicating potential investor disappointment or uncertainty about the company's future prospects. Additionally, the mention of upcoming earnings from Nvidia and Federal Reserve minutes suggests that there may be more market-moving events ahead, which could further impact investor sentiment.",
+      "reasoning": "The article reports a plunge in Palo Alto Networks' stock price following its earnings report, which is likely to negatively impact investor confidence. Additionally, the upcoming earnings report from Nvidia and Federal Reserve meeting may introduce further uncertainty, potentially affecting the overall market sentiment.",
       "sentiment": -0.4,
       "confidence": 0.75,
       "valid": true,
       "url": "https://finance.yahoo.com/m/9f465d28-54c5-3841-b85f-f5d6a5dc5bc8/dow-jones-futures%3A-ai-stock.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 20:50:23 +0000",
-      "time_taken": 4.44
+      "time_taken": 3.89
     },
     "6f5003f2": {
-      "reasoning": "The article discusses the significant impact of ChatGPT's release and Nvidia's growth on the investing world and economy, leading to new all-time highs in markets despite recession concerns. It also highlights the impressive 234% run in Nvidia stock over the last year, which has attracted many investors. The mention of Alphabet and Microsoft as recommended stocks further reinforces a positive sentiment towards these companies.",
+      "reasoning": "The article discusses the significant impact of ChatGPT's release and Nvidia's growth on the investing world, leading to new all-time highs in the markets despite recession concerns. It also highlights the impressive 234% run in Nvidia stock over the last year, which has attracted many investors. The mention of Suzanne Frey, an executive at Alphabet, being a member of The Motley Fool's board and Bradley Guichard having positions in Alphabet, Arm Holdings, and Nvidia suggests a positive sentiment towards these companies.",
       "sentiment": 0.8,
       "confidence": 0.9,
       "valid": true,
       "url": "https://www.fool.com/investing/2024/05/20/3-artificial-intelligence-ai-stock-picks-with-incr/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
       "published": "Mon, 20 May 2024 20:30:00 +0000",
-      "time_taken": 5.82
+      "time_taken": 7.41
     },
     "7be9fbd1": {
-      "reasoning": "The article discusses Nvidia's upcoming earnings report and its potential impact on the stock value. Analysts are raising their price targets ahead of the earnings, indicating positive expectations from the market. The company has powered market rallies in early 2024, suggesting a strong performance could lead to another rally.",
-      "sentiment": 0.6,
+      "reasoning": "The article discusses Nvidia's upcoming earnings report and its potential impact on the stock market. While there are concerns about a possible 'air pocket' in the quarter, several analysts have raised their price targets on Nvidia ahead of the earnings. The article also mentions positive comments from Michael Dell and Huang of NVIDIA, as well as a note from Baird that praises Nvidia's product offering this year and next, which could positively impact market share in the second half of the year.",
+      "sentiment": 0.4,
       "confidence": 0.8,
       "valid": true,
       "url": "https://finance.yahoo.com/video/wall-street-firms-nvidia-price-202536646.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 20:25:36 +0000",
-      "time_taken": 5.21
+      "time_taken": 7.01
     },
     "7fe80a1c": {
-      "reasoning": "The article reports on Dell's launch of new AI-enabled computers and expansion of its AI collaboration with Nvidia. This suggests a positive development for Dell, as it is investing in cutting-edge technology and strengthening its partnership with a leading company in the field. This could lead to increased customer interest and confidence in Dell's products.",
+      "reasoning": "The article reports a positive development for Dell, as it launches new AI-enabled computers and expands its AI collaboration with Nvidia. This suggests increased innovation and competitiveness in the market, which could positively impact Dell's stock value.",
       "sentiment": 0.6,
       "confidence": 0.8,
       "valid": true,
       "url": "https://finance.yahoo.com/news/dell-launches-ai-enabled-computers-202204166.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 20:22:04 +0000",
-      "time_taken": 4.48
+      "time_taken": 3.46
     },
     "bcdd3918": {
-      "reasoning": "The article presents a mixed bag of news, with some companies experiencing positive developments (Hims & Hers Health adding GLP-1 injections to its weight-loss portfolio) while others report negative results (Li Auto's 37% decline in first-quarter net profit). The overall sentiment is neutral as the positive and negative news are balanced.",
+      "reasoning": "The article presents a mixed bag of news, with some companies experiencing positive developments (Hims & Hers Health adding GLP-1 injections to its portfolio, Norwegian Cruise Line raising its full-year earnings guidance) and others facing negative outcomes (Li Auto reporting a 37% decline in first-quarter net profit). The overall sentiment is neutral as the positive developments are balanced by the negative ones.",
       "sentiment": 0.0,
       "confidence": 0.75,
       "valid": true,
       "url": "https://finance.yahoo.com/m/5c2a8b2d-0260-3d4e-bd7a-e1b817201def/these-stocks-moved-the-most.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 20:20:00 +0000",
-      "time_taken": 4.83
+      "time_taken": 5.37
     },
     "302c8a97": {
-      "reasoning": "The sentiment is neutral based on the financial context of the sentence.",
-      "sentiment": 0.0,
-      "confidence": 0.6,
+      "reasoning": "The sentiment is negative based on the financial context of the sentence.",
+      "sentiment": -1.0,
+      "confidence": 0.4,
       "valid": true,
       "url": "https://finance.yahoo.com/m/89e16f2a-62e3-338f-ae19-1d7b5df8dd92/nvidia-stock-gains-ahead-of.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 20:15:00 +0000",
@@ -84,103 +84,103 @@
       "time_taken": 1.98
     },
     "4cf981ee": {
-      "reasoning": "The article highlights that only three companies (Magnificent Seven stocks) have met the 25% growth standard in earnings, indicating strong financial performance and potential for continued growth. This positive sentiment towards these companies' stock values is likely to attract investors and drive their share prices higher.",
+      "reasoning": "The article highlights that only three companies (Magnificent Seven) meet the triple-25% growth standard in terms of earnings, indicating strong financial performance and potential for future growth. This suggests a positive sentiment towards these companies' stock values.",
       "sentiment": 0.8,
       "confidence": 0.9,
       "valid": true,
       "url": "https://finance.yahoo.com/m/59a2e761-7e6d-3306-8158-bad54247c5be/magnificent-seven%3F-just-two.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 20:07:58 +0000",
-      "time_taken": 4.06
+      "time_taken": 3.66
     },
     "2e7c99cd": {
-      "reasoning": "The article presents a positive outlook on NVIDIA's quarterly earnings, highlighting the company's dominance in the AI chip market and its growing revenue. The mention of NVIDIA's shares rising over 90% this year and nearly 240% in 2023 suggests strong investor confidence. Additionally, the article notes that NVIDIA's valuation does not seem overstretched, as earnings are growing faster than its share price.",
+      "reasoning": "The article discusses NVIDIA's quarterly earnings and its dominance in the AI chip market, with a significant surge in demand for its AI chips. The company's shares have risen over 90% this year, and its valuation does not seem overstretched due to growing earnings. The article also mentions that large technology companies are designing their own chips, which could reduce their reliance on NVIDIA.",
       "sentiment": 0.8,
       "confidence": 0.9,
       "valid": true,
       "url": "https://finance.yahoo.com/news/play-nvidia-earnings-bullish-etfs-194300123.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 19:43:00 +0000",
-      "time_taken": 6.72
+      "time_taken": 6.51
     },
     "b2530e0e": {
-      "reasoning": "The article discusses Nvidia's partnership with Dell Technologies to spread artificial intelligence (AI) to a wider range of customers, helping businesses create their own 'AI factories'. This expansion plan hinges on getting agencies and businesses to develop their own AI capabilities, which would increase demand for Nvidia's products. The CEO is pushing Nvidia deeper into software tools, computer design, and AI models, preparing the company for the shift towards AI. The article also highlights Nvidia's rapid revenue growth, with analysts estimating a 243% sales growth last quarter.",
+      "reasoning": "The article discusses Nvidia's partnership with Dell Technologies to spread artificial intelligence (AI) to a wider range of customers, enabling businesses and organizations to create their own 'AI factories.' This collaboration is expected to increase demand for Nvidia's products by providing storage, networking, and computing solutions. The CEO's emphasis on expanding into software tools, computer design, and AI models suggests a strategic shift towards diversifying the company's technology offerings. The article also highlights Nvidia's significant revenue growth and its position as the largest seller of AI accelerators.",
       "sentiment": 0.8,
       "confidence": 0.9,
       "valid": true,
       "url": "https://finance.yahoo.com/news/nvidia-ceo-says-dell-partnership-194039270.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 19:40:39 +0000",
-      "time_taken": 8.51
+      "time_taken": 8.86
     },
     "3c0b1c59": {
-      "reasoning": "The article expresses extremely positive sentiment towards Nvidia's upcoming quarterly results, particularly in regards to its Data Center revenue. The expected growth of 380% over the year-ago mark and consistent surpassals of consensus expectations suggest strong demand for AI applications, which is likely to positively impact investor confidence and stock value.",
-      "sentiment": 0.9,
-      "confidence": 0.95,
+      "reasoning": "The article expresses extremely positive sentiment towards Nvidia's upcoming quarterly results, particularly highlighting the expected astonishing growth in Data Center revenue. The consistent beating of consensus estimates and the robust expectations further reinforce this optimism.",
+      "sentiment": 0.95,
+      "confidence": 0.98,
       "valid": true,
       "url": "https://finance.yahoo.com/news/nvidia-earnings-loom-closer-look-192500552.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 19:25:00 +0000",
-      "time_taken": 5.06
+      "time_taken": 3.94
     },
     "74832795": {
       "reasoning": "The sentiment is positive based on the financial context of the sentence.",
       "sentiment": 1.0,
-      "confidence": 0.4,
+      "confidence": 0.8,
       "valid": true,
       "url": "https://finance.yahoo.com/m/30970777-e123-3d00-972a-1146fed271ce/nasdaq%2C-s%26p-500-advance-to.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 18:16:00 +0000",
-      "time_taken": 1.97
+      "time_taken": 1.96
     },
     "f2dfb8f6": {
-      "reasoning": "The article reports on Dell Technologies unveiling a range of AI-enabled PCs powered by Qualcomm processors and introducing a new server supporting Nvidia's latest chips. The announcements are likely to positively impact Dell's stock value as they demonstrate the company's commitment to innovation and growth in lucrative markets, such as artificial intelligence servers.",
+      "reasoning": "The article reports on Dell Technologies unveiling a range of AI-enabled PCs powered by Qualcomm processors and introducing a new server supporting Nvidia's latest chips, which is expected to be available from the second half of 2024. The company's president also stated that their Nvidia-based servers were the fastest ramping product in its history. This suggests a positive outlook for Dell Technologies' future revenue prospects, particularly in the lucrative market for artificial intelligence servers.",
       "sentiment": 0.6,
       "confidence": 0.8,
       "valid": true,
       "url": "https://finance.yahoo.com/news/dell-deepens-ai-push-pcs-180621535.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 18:06:21 +0000",
-      "time_taken": 4.92
+      "time_taken": 6.27
     },
     "9092432e": {
-      "reasoning": "The article reports that Microsoft is set to reveal new hardware and software for consumer devices, featuring Qualcomm chips based on Arm architecture. This news is likely to have a positive impact on Qualcomm's stock value, as it secures the company's exclusivity on Windows devices until this year. However, the article also mentions that Qualcomm's exclusivity ends this year, potentially opening the market to other chipmakers like NVIDIA.",
+      "reasoning": "The article discusses Microsoft's upcoming announcement of new hardware and software for consumer devices, featuring Qualcomm chips based on Arm architecture. This move is seen as a positive development for Microsoft, enhancing AI capabilities in its devices. However, the exclusivity of Qualcomm on Windows devices ending this year may open up opportunities for other chipmakers like NVIDIA, potentially creating competition.",
       "sentiment": 0.4,
       "confidence": 0.8,
       "valid": true,
       "url": "https://finance.yahoo.com/news/microsoft-unveil-surface-devices-redmond-180340234.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 18:03:40 +0000",
-      "time_taken": 5.82
+      "time_taken": 5.19
     },
     "8e410aff": {
-      "reasoning": "The article discusses the upcoming Nvidia earnings report and its potential impact on the market. It mentions that investors are looking at Nvidia as a test for the market rally, and that strained US-China relations could affect the company's business. However, it also notes that Nvidia has designed compliant chips to send to other parts of the world, which suggests that the company is prepared for the export controls. The article presents a balanced view, discussing both the potential risks and opportunities for Nvidia.",
+      "reasoning": "The article discusses the upcoming earnings report of Nvidia (NVDA) and its potential impact on the market rally. The tone is neutral, providing an analysis of the situation without expressing a clear opinion or bias. The mention of JPMorgan Chase & Co. (JPM) raising its full-year guidance for net interest income and Micron Technology (MU) receiving an upgrade from Morgan Stanley suggests a positive outlook for these companies. However, the article also mentions Red Lobster filing for bankruptcy, which could have a negative impact on the market.",
       "sentiment": 0.1,
       "confidence": 0.6,
       "valid": true,
       "url": "https://finance.yahoo.com/video/investors-eye-nvidia-red-lobster-174152755.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 17:41:52 +0000",
-      "time_taken": 8.48
+      "time_taken": 9.34
     },
     "e4a31911": {
-      "reasoning": "The article presents a mixed bag of news, with some companies experiencing positive developments (Hims & Hers Health adding new services) while others report significant declines (Li Auto's 37% drop in net profit). The overall sentiment is neutral as the negative impact from Li Auto's decline might offset the positive effects from Hims & Hers Health and Norwegian Cruise Line's earnings guidance increase.",
-      "sentiment": 0.05,
+      "reasoning": "The article presents a mixed bag of news, with some companies experiencing positive developments while others face significant declines. Hims & Hers Health's addition of GLP-1 injections to its weight-loss portfolio is likely to be viewed positively by investors, as it expands the company's offerings and could attract new customers. On the other hand, Li Auto's 37% decline in first-quarter net profit is a significant negative event that may lead to decreased investor confidence. Norwegian Cruise Line's decision to raise its full-year earnings guidance suggests positive growth prospects for the company.",
+      "sentiment": 0.15,
       "confidence": 0.75,
       "valid": true,
       "url": "https://finance.yahoo.com/m/886dec8c-8473-3b40-aba2-a65f4017c0f2/these-stocks-are-moving-the.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 17:12:52 +0000",
-      "time_taken": 5.11
+      "time_taken": 6.87
     },
     "4be7219f": {
-      "reasoning": "The article discusses Nvidia's upcoming earnings report, with analysts expecting strong growth due to increasing demand in the artificial intelligence (AI) market. The mention of AI as a trend that will change things like the Internet did 30-40 years ago suggests a positive outlook on Nvidia's future prospects.",
+      "reasoning": "The article discusses Nvidia's upcoming earnings report, with analysts expecting strong growth due to increasing demand in the artificial intelligence (AI) market. The company's stock has jumped 15% in early trading, indicating positive investor sentiment. Additionally, the article highlights how AI is becoming a trend, with mentions of AI on earnings calls rising significantly compared to last quarter.",
       "sentiment": 0.8,
       "confidence": 0.9,
       "valid": true,
       "url": "https://finance.yahoo.com/video/investors-await-nvidia-earnings-commodities-170555301.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 17:05:55 +0000",
-      "time_taken": 7.88
+      "time_taken": 8.56
     },
     "fc5bc0ae": {
-      "reasoning": "The article expresses a positive sentiment towards Nvidia's upcoming earnings report, citing the excitement around AI updates from OpenAI and Alphabet. The expected YoY earnings growth of 412% and revenue growth of 241% also suggests a strong performance, which could positively impact investor confidence and stock value.",
-      "sentiment": 0.8,
-      "confidence": 0.9,
+      "reasoning": "The article presents a mixed sentiment towards Nvidia's upcoming earnings report, citing both positive economic data and the high bar set by recent AI updates from OpenAI and Alphabet. The expected YoY earnings and revenue growth are significant, which could positively impact investor sentiment.",
+      "sentiment": 0.4,
+      "confidence": 0.75,
       "valid": true,
       "url": "https://finance.yahoo.com/news/1st-quarter-earnings-season-winds-164956506.html?.tsrc=rss",
       "published": "Mon, 20 May 2024 16:49:56 +0000",
-      "time_taken": 4.6
+      "time_taken": 4.26
     }
   }
 }
