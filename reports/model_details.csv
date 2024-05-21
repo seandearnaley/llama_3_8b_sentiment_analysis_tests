@@ -1,6 +1,21 @@
 Model Name,Quantization Level,Inference Rate (s),Valid JSON Rate,Sentiment Variance,Mean Sentiment,Mean Confidence
+llama3_8b-instruct-sentiment_analysis-q4_K_M,q4_K_M,3.652,1.0,0.199,0.352,0.774
+llama3_8b-instruct-sentiment_analysis-q5_K_M,q5_K_M,4.418,1.0,0.182,0.367,0.771
+llama3_8b-instruct-sentiment_analysis-q8_0,q8_0,4.983,0.996,0.214,0.356,0.771
 llama3_8b-instruct-sentiment_analysis-fp16,fp16,7.841,1.0,0.21,0.356,0.768
+llama3_8b-instruct-q4_K_M,q4_K_M,3.745,1.0,0.161,0.413,0.869
+llama3_8b-instruct-q5_K_M,q5_K_M,4.429,1.0,0.178,0.385,0.855
+llama3_8b-instruct-q8_0,q8_0,4.958,1.0,0.177,0.373,0.848
 llama3_8b-instruct-fp16,fp16,7.839,1.0,0.176,0.364,0.852
+mistral-7b-sentiment-may-18-2024-1epoch-unsloth.Q4_K_M,unsloth.Q4_K_M,3.963,1.0,0.145,0.479,0.774
+mistral-7b-sentiment-may-18-2024-1epoch-unsloth.Q5_K_M,unsloth.Q5_K_M,4.793,1.0,0.134,0.484,0.771
+mistral-7b-sentiment-may-18-2024-1epoch-unsloth.Q8,unsloth.Q8,5.331,1.0,0.126,0.499,0.77
 mistral-7b-sentiment-may-18-2024-1epoch-unsloth.F16,unsloth.F16,8.464,1.0,0.13,0.482,0.772
+mistral_7b-instruct-q4_K_M,q4_K_M,4.364,0.725,0.085,0.46,0.86
+mistral_7b-instruct-q5_K_M,q5_K_M,5.277,0.796,0.094,0.485,0.855
+mistral_7b-instruct-q8_0,q8_0,5.718,0.814,0.067,0.497,0.855
 mistral_7b-instruct-fp16,fp16,8.858,0.764,0.093,0.455,0.853
+dolphin-mistral_7b-v2.8-q4_K_M,q4_K_M,3.963,1.0,0.076,0.593,0.875
+dolphin-mistral_7b-v2.8-q5_K_M,q5_K_M,5.085,1.0,0.097,0.55,0.835
+dolphin-mistral_7b-v2.8-q8_0,q8_0,5.489,1.0,0.094,0.571,0.852
 dolphin-mistral_7b-v2.8-fp16,fp16,8.719,1.0,0.098,0.561,0.853
