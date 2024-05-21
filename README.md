@@ -1,4 +1,3 @@
-
 # Llama 3 8B Sentiment Analysis Tests
 
 This repository contains code and resources for performing sentiment analysis tests using various models, specifically tailored for financial news articles. The project leverages Yahoo Finance news data, and processes it to evaluate and compare the performance of different sentiment analysis models.
@@ -11,6 +10,8 @@ This repository contains code and resources for performing sentiment analysis te
 - [Scripts](#scripts)
   - [generate_model_sentiments.py](#generate_model_sentimentspy)
   - [generate_model_comparison_report.py](#generate_model_comparison_reportpy)
+  - [generate_model_metrics.py](#generate_model_metricspy)
+  - [generate_heatmaps.py](#generate_heatmapspy)
 - [Utils](#utils)
   - [file_utils.py](#file_utilspy)
   - [web_scraper.py](#web_scraperpy)
@@ -57,8 +58,9 @@ context_window_size: 8192
 num_tokens_to_predict: 1024
 sentiment_save_folder: "sentiments"
 report_output_file: "reports/model_comparisons.xlsx"
+report_output_csv_file: "reports/model_metrics.csv"
+heatmaps_folder: "heatmaps"
 report_output_csv_folder: "reports"
-report_example_sample_size: 5
 comparison_pairs:
   - ["model-1", "model-2"]
 ```
@@ -75,10 +77,26 @@ poetry run python generate_model_sentiments.py
 
 ### generate_model_comparison_report.py
 
-This script compares the results from different sentiment analysis models and generates a comprehensive report in Excel format, including statistical comparisons. To run the script, execute:
+This script compares the results from different sentiment analysis models and generates a comprehensive report in Excel and CSV formats, including statistical comparisons. To run the script, execute:
 
 ```sh
 poetry run python generate_model_comparison_report.py
+```
+
+### generate_model_metrics.py
+
+This script computes various metrics for the sentiment analysis models based on their performance and stores the results in Excel and CSV formats. To run the script, execute:
+
+```sh
+poetry run python generate_model_metrics.py
+```
+
+### generate_heatmaps.py
+
+This script generates heatmaps for different performance metrics of the sentiment analysis models and saves them as PNG images. To run the script, execute:
+
+```sh
+poetry run python generate_heatmaps.py
 ```
 
 ## Utils
