@@ -1,5 +1,4 @@
 import hashlib
-import logging
 import os
 import time
 from datetime import datetime, timedelta
@@ -7,7 +6,7 @@ from typing import Any, Dict, List
 
 from langchain_community.llms import Ollama
 
-from utils.context import AnalysisContext
+from utils.context import AnalysisContext, logger
 from utils.error_decorator import handle_errors
 from utils.file_utils import (
     get_file_content,
@@ -64,10 +63,23 @@ def test_models(
     context: AnalysisContext,
 ) -> None:
     for model_name in models_to_test:
-        logging.info(f"Testing model: {model_name}")
+        logger.info(f"Testing model: {model_name}")
+
+        llm = initialize_llm(
+            model_name,
+            context.default_temperature,
+            context.context_window_size,
+            context.num_tokens_to_predict,
+        )
+
+        # Pre-warm the model
+        pre_warm_model(llm)
+
+        analyze_prompt = prepare_analyze_prompt(llm, model_name)
+
         for i in range(sample_size):
-            test_model(model_name, i, context)
-        logging.info("")
+            test_model(model_name, i, context, analyze_prompt, llm)
+        logger.info("")
 
 
 def initialize_llm(
@@ -76,12 +88,14 @@ def initialize_llm(
     context_window_size: int,
     num_tokens_to_predict: int,
 ) -> Ollama:
-    return Ollama(
+    llm = Ollama(
         model=model_name,
         temperature=default_temperature,
         num_ctx=context_window_size,
         num_predict=num_tokens_to_predict,
     )
+
+    return llm
 
 
 def pre_warm_model(llm: Ollama, dummy_prompt: str = DUMMY_PROMPT) -> None:
@@ -92,19 +106,10 @@ def test_model(
     model_name: str,
     iteration: int,
     context: AnalysisContext,
+    analyze_prompt: str,
+    llm: Ollama = None,
 ):
     start_time = time.time()
-    llm = initialize_llm(
-        model_name,
-        context.default_temperature,
-        context.context_window_size,
-        context.num_tokens_to_predict,
-    )
-
-    # Pre-warm the model
-    pre_warm_model(llm)
-
-    analyze_prompt = prepare_analyze_prompt(llm, model_name)
 
     sentiments_map = analyze_content(
         llm,
@@ -143,7 +148,7 @@ def save_results(
     results_dir = os.path.join(sentiment_save_folder, model_name.replace(":", "_"))
     if not os.path.exists(results_dir):
         os.makedirs(results_dir)
-        logging.info(f"Created directory: {results_dir}")
+        logger.info(f"Created directory: {results_dir}")
 
     sentiment_file = os.path.join(results_dir, ticker_symbol + f"_{iteration}.json")
     data = {
@@ -171,7 +176,7 @@ def analyze_content(
             is_sentiment_model, analyze_prompt, content, company_name
         )
 
-        logging.info(f"Iteration: {iteration + 1}, item: {j + 1}/{len(content_map)}")
+        logger.info(f"Iteration: {iteration + 1}, item: {j + 1}/{len(content_map)}")
         sentiment_json = process_content(llm, prompt, url, news_object)
         if sentiment_json:
             sentiments_map[hash_url(url)] = sentiment_json
@@ -218,7 +223,7 @@ def process_content(
         }
     )
     if not valid:
-        logging.error(f"Invalid JSON output for URL {url}: {output}")
+        logger.error(f"Invalid JSON output for URL {url}: {output}")
     return sentiment_json
 
 
@@ -244,7 +249,7 @@ def compute_weighted_average_sentiment(sentiments_map: Dict[str, Dict]) -> float
         average_sentiment /= total_weight
         average_sentiment = round(average_sentiment, 2)
     else:
-        logging.warning("Total weight is zero. Returning default sentiment value.")
+        logger.warning("Total weight is zero. Returning default sentiment value.")
         average_sentiment = 0.0
 
     return average_sentiment

@@ -1,4 +1,6 @@
-# sentiments/
+sentiments/
 sentiments_old/
+sentiments_b4_mistral/
+reports_b4_mistral/
 __pycache__/
 news_cache.sqlite

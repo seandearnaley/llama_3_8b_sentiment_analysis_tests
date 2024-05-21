@@ -1,10 +1,11 @@
 import json
-import logging
 import os
 from functools import lru_cache
 from typing import Any, Dict
 
 import yaml
+
+from utils.context import logger
 
 # Define constants for paths
 MESSAGES_DIR = "messages"
@@ -25,7 +26,7 @@ def get_file_content(file_name: str) -> str:
 def save_json_to_file(file_path: str, data: Dict[str, Any]) -> None:
     with open(file_path, FILE_WRITE_MODE) as file:
         json.dump(data, file, indent=2)
-        logging.info(f"Saved JSON to file: {file_path}")
+        logger.info(f"Saved JSON to file: {file_path}")
 
 
 def load_config(file_path: str) -> Dict[str, Any]:
@@ -34,8 +35,8 @@ def load_config(file_path: str) -> Dict[str, Any]:
         with open(file_path, FILE_READ_MODE) as file:
             return yaml.safe_load(file)
     except FileNotFoundError:
-        logging.error(f"Config file not found: {file_path}")
+        logger.error(f"Config file not found: {file_path}")
         raise
     except yaml.YAMLError as e:
-        logging.error(f"Error parsing YAML file {file_path}: {e}")
+        logger.error(f"Error parsing YAML file {file_path}: {e}")
         raise

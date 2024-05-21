@@ -1,8 +1,7 @@
-import logging
 from functools import lru_cache
 
+import diskcache as dc
 import FinNews as fn
-import requests_cache
 import yfinance as yf
 
 from utils.analysis_utils import (
@@ -10,7 +9,7 @@ from utils.analysis_utils import (
     filter_recent_news,
     test_models,
 )
-from utils.context import AnalysisContext
+from utils.context import AnalysisContext, logger
 from utils.error_decorator import handle_errors
 from utils.file_utils import (
     load_config,
@@ -18,15 +17,13 @@ from utils.file_utils import (
 from utils.web_scraper import get_content
 
 CONFIG_FILE = "config.yaml"
+CACHE_DIR = "cache"
+CACHE_TIMEOUT = 24 * 60 * 60  # 24 hours in seconds
 
-logging.basicConfig(
-    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
-)
+logger.debug("Logging is configured.")
 
-# Initialize requests cache
-requests_cache.install_cache(
-    "news_cache", expire_after=3600
-)  # Cache expires after 1 hour
+
+cache = dc.Cache(CACHE_DIR)
 
 
 @lru_cache(maxsize=None)
@@ -38,19 +35,32 @@ def get_company_name(ticker_symbol: str) -> str:
     return clean_company_name(ticker.info["longName"])
 
 
-@lru_cache(maxsize=None)
 @handle_errors([])
 def get_news(ticker_symbol: str, max_news_age: int, max_news_items: int) -> list:
+    cache_key = f"news_{ticker_symbol}"
+    cached_news = cache.get(cache_key)
+    if cached_news:
+        logger.info("Returning cached news data.")
+        # Ensure the cached data is a list
+        if isinstance(cached_news, list):
+            return cached_news
+        else:
+            logger.error("Cached news data is not a list.")
+            return []
+
     yahoo_feed = fn.Yahoo(topics=["$" + ticker_symbol])
-    logging.info("Getting news from Yahoo Finance...")
+    logger.info("Getting news from Yahoo Finance...")
     news_object = yahoo_feed.get_news()
-    return filter_recent_news(news_object, max_news_age, max_news_items)
+    filtered_news = filter_recent_news(news_object, max_news_age, max_news_items)
+
+    cache.set(cache_key, filtered_news, expire=CACHE_TIMEOUT)
+    return filtered_news
 
 
 @handle_errors({})
 def get_content_map(news_object: list, company_name: str, ticker_symbol: str) -> dict:
     content_map = {}
-    logging.info("Getting content from the news articles...")
+    logger.info("Getting content from the news articles...")
     for news in news_object:
         url = news["link"]
         content = news["summary"] if news["summary"][-1] != "?" else ""
@@ -64,7 +74,7 @@ def get_content_map(news_object: list, company_name: str, ticker_symbol: str) ->
 
 @handle_errors(False)
 def log_company_info(company_name: str, ticker_symbol: str) -> bool:
-    logging.info(f"Company: {company_name} ({ticker_symbol})")
+    logger.info(f"Company: {company_name} ({ticker_symbol})")
     return True
 
 

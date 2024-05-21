@@ -1,5 +1,20 @@
+import logging
 from dataclasses import dataclass
 from typing import Any, Dict, List
+
+
+def configure_logging():
+    logger = logging.getLogger("app_logger")
+    logger.setLevel(logging.INFO)
+    if not logger.handlers:
+        handler = logging.StreamHandler()
+        formatter = logging.Formatter("%(asctime)s - %(levelname)s - %(message)s")
+        handler.setFormatter(formatter)
+        logger.addHandler(handler)
+    return logger
+
+
+logger = configure_logging()
 
 
 @dataclass

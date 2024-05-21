@@ -1,75 +1,174 @@
 {
-  "average_sentiment": 0.37,
-  "time_taken": 51.8,
+  "average_sentiment": 0.59,
+  "time_taken": 109.59,
   "sentiments": {
-    "91ba90ac": {
-      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative words and phrases. The presence of positive words such as 'market rally', 'record highs', and 'buy signals' were taken into account, along with the positive sentiment expressed towards Nvidia.",
-      "sentiment": 0.42,
-      "confidence": 0.85,
-      "valid": true,
-      "url": "https://finance.yahoo.com/m/ae28caa6-3ead-3745-aece-9ddb64e2ea1d/dow-jones-futures%3A-walmart%2C.html?.tsrc=rss",
-      "published": "Thu, 16 May 2024 21:29:02 +0000",
-      "time_taken": 4.79
-    },
-    "bf372e87": {
-      "reasoning": "The sentiment analysis was performed using natural language processing techniques to identify positive and negative words in the article. The sentiment value is based on the overall sentiment of the article, which is determined by the weighted average of the sentiment scores of individual words.",
-      "sentiment": 0.15,
-      "confidence": 0.95,
-      "valid": true,
-      "url": "https://finance.yahoo.com/m/6ab7d488-38e1-3ef1-beef-bf75a726d6c2/nvidia-stock-couldn%E2%80%99t-close.html?.tsrc=rss",
-      "published": "Thu, 16 May 2024 20:30:00 +0000",
-      "time_taken": 4.63
-    },
-    "d4c4ccc1": {
-      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative words and phrases related to Nvidia's potential short-term stock value. The sentiment score was then calculated based on the overall tone of the article.",
-      "sentiment": 0.6,
-      "confidence": 0.8,
-      "valid": true,
-      "url": "https://finance.yahoo.com/video/chip-stocks-wolfe-research-bullish-201319388.html?.tsrc=rss",
-      "published": "Thu, 16 May 2024 20:13:19 +0000",
-      "time_taken": 5.35
-    },
-    "30176a40": {
-      "reasoning": "The sentiment analysis is based on the presence of positive keywords such as 'lifting' and 'demand' in the article, which indicate that the stock value of Core & Main (CNM) is expected to increase. The negative keyword 'AWOL' associated with Nvidia is not relevant to CNM's stock performance.",
-      "sentiment": 0.62,
-      "confidence": 0.95,
-      "valid": true,
-      "url": "https://finance.yahoo.com/m/26c4c355-4c17-3878-9935-b7ea9ff2b1d6/who-needs-nvidia%3F-top-funds.html?.tsrc=rss",
-      "published": "Thu, 16 May 2024 20:06:03 +0000",
-      "time_taken": 5.13
-    },
-    "4308627f": {
-      "reasoning": "The sentiment analysis is based on the presence of positive and negative words in the article. In this case, the article mentions that Broadcom has usurped the top spot from Nvidia, which suggests a potential decline in Nvidia's stock value. Therefore, the sentiment is likely to be negative.",
-      "sentiment": -0.5,
-      "confidence": 0.8,
-      "valid": true,
-      "url": "https://finance.yahoo.com/m/e585b34d-fb68-3db1-a53f-e6cb7ec2c2b9/nvidia-dethroned%3A-this-ai.html?.tsrc=rss",
-      "published": "Thu, 16 May 2024 20:00:28 +0000",
-      "time_taken": 4.84
-    },
-    "0e0b8975": {
-      "reasoning": "The sentiment analysis is based on the presence of positive and negative words in the article, as well as the overall tone. The reasoning used to determine the sentiment value is as follows: Positive words such as 'anticipated', 'Superbowl', 'Strong Buy', 'up', 'ballooned', 'powering', 'AI revolution', 'run', 'large language models', and 'major bullish catalyst' were identified. Negative words such as 'Chinese regulators' and 'impact' were also present. The overall tone of the article is positive, with a focus on Nvidia's strong performance and growth prospects.",
-      "sentiment": 0.75,
-      "confidence": 0.95,
-      "valid": true,
-      "url": "https://finance.yahoo.com/news/nvidia-earnings-superbowl-ai-video-195000985.html?.tsrc=rss",
-      "published": "Thu, 16 May 2024 19:50:00 +0000",
-      "time_taken": 9.26
-    },
-    "ce972942": {
-      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative words and phrases related to Nvidia's potential short-term stock value.",
+    "63f711be": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative words and phrases related to Nvidia's potential short-term stock value. The analysis also took into account the expert opinions expressed in the article.",
       "sentiment": 0.5,
       "confidence": 0.8,
       "valid": true,
-      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
-      "published": "Thu, 16 May 2024 17:26:42 +0000",
-      "time_taken": 3.61
+      "url": "https://finance.yahoo.com/video/nvidia-earnings-impress-hard-please-212734404.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 21:27:34 +0000",
+      "time_taken": 5.92
     },
-    "6c3dee93": {
+    "1ed47412": {
       "valid": false,
-      "url": "https://finance.yahoo.com/news/t-mobile-tmus-5g-enhance-163200864.html?.tsrc=rss",
-      "published": "Thu, 16 May 2024 16:32:00 +0000",
-      "time_taken": 5.49
+      "url": "https://finance.yahoo.com/m/2b2f05dd-371a-3777-8304-e3ffa1f2b7f4/can-nvidia-stock-reach-the.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 21:25:41 +0000",
+      "time_taken": 3.78
+    },
+    "5852d8b8": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/m/9f465d28-54c5-3841-b85f-f5d6a5dc5bc8/dow-jones-futures%3A-ai-stock.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 20:50:23 +0000",
+      "time_taken": 4.53
+    },
+    "6f5003f2": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative words, phrases, and sentiments. The sentiment score was then calculated based on the overall tone of the article.",
+      "sentiment": 0.52,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://www.fool.com/investing/2024/05/20/3-artificial-intelligence-ai-stock-picks-with-incr/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
+      "published": "Mon, 20 May 2024 20:30:00 +0000",
+      "time_taken": 4.47
+    },
+    "7be9fbd1": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative keywords and phrases related to Nvidia's fiscal first-quarter earnings results, market performance, price targets, concerns about a possible air pocket, and product offerings. The sentiment value was then calculated based on the overall tone of the article.",
+      "sentiment": 0.75,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/wall-street-firms-nvidia-price-202536646.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 20:25:36 +0000",
+      "time_taken": 6.25
+    },
+    "7fe80a1c": {
+      "reasoning": "The sentiment of the article is determined by analyzing the presence and context of positive and negative words. In this case, the article mentions Dell launching new AI-enabled computers and expanding its collaboration with Nvidia, which are both positive developments. The sentiment value is therefore positive.",
+      "sentiment": 0.8,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/dell-launches-ai-enabled-computers-202204166.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 20:22:04 +0000",
+      "time_taken": 4.54
+    },
+    "bcdd3918": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative words and phrases related to Nvidia's potential short-term stock value.",
+      "sentiment": 0.5,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/5c2a8b2d-0260-3d4e-bd7a-e1b817201def/these-stocks-moved-the-most.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 20:20:00 +0000",
+      "time_taken": 3.58
+    },
+    "302c8a97": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article and identifying any positive or negative words or phrases related to Nvidia's potential short-term stock value. The sentiment score was then calculated based on the overall tone of the article.",
+      "sentiment": 0.2,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/89e16f2a-62e3-338f-ae19-1d7b5df8dd92/nvidia-stock-gains-ahead-of.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 20:15:00 +0000",
+      "time_taken": 4.19
+    },
+    "7be44b2c": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/m/a701fe53-d20e-30c3-8503-356351e2f97e/dow-jones-dips-as-ai-stock.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 20:09:06 +0000",
+      "time_taken": 4.05
+    },
+    "4cf981ee": {
+      "reasoning": "The sentiment analysis is based on the presence of positive keywords such as 'magnificent seven' and 'triple-25% growth standard', which indicate a positive outlook for Nvidia's potential short-term stock value.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/59a2e761-7e6d-3306-8158-bad54247c5be/magnificent-seven%3F-just-two.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 20:07:58 +0000",
+      "time_taken": 4.05
+    },
+    "2e7c99cd": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/news/play-nvidia-earnings-bullish-etfs-194300123.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 19:43:00 +0000",
+      "time_taken": 6.11
+    },
+    "b2530e0e": {
+      "reasoning": "The sentiment analysis is based on the sentiment of the news article towards Nvidia's partnership with Dell Technologies to spread artificial intelligence to a wider range of customers. The sentiment is determined by analyzing the language used in the article, including positive and negative words and phrases.",
+      "sentiment": 0.75,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidia-ceo-says-dell-partnership-194039270.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 19:40:39 +0000",
+      "time_taken": 6.62
+    },
+    "3c0b1c59": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article and identifying positive and negative words, phrases, and sentiments. The sentiment value was then calculated based on a weighted average of these factors.",
+      "sentiment": 0.95,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidia-earnings-loom-closer-look-192500552.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 19:25:00 +0000",
+      "time_taken": 4.57
+    },
+    "74832795": {
+      "reasoning": "The sentiment analysis is based on the use of positive language such as 'stocks rose' and 'technology shares leading the way higher'. The article also mentions the S&P 500 and Nasdaq Composite seeking fresh record highs, which further supports a positive sentiment.",
+      "sentiment": 0.72,
+      "confidence": 0.98,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/30970777-e123-3d00-972a-1146fed271ce/nasdaq%2C-s%26p-500-advance-to.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 18:16:00 +0000",
+      "time_taken": 4.63
+    },
+    "f2dfb8f6": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative keywords related to Nvidia's potential short-term stock value. The sentiment was determined based on the overall tone and context of the article.",
+      "sentiment": 0.5,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/dell-deepens-ai-push-pcs-180621535.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 18:06:21 +0000",
+      "time_taken": 4.71
+    },
+    "9092432e": {
+      "reasoning": "The sentiment towards the potential short-term stock value of Nvidia is determined by analyzing the article's text for positive and negative words and phrases related to Nvidia. The article mentions that Qualcomm will power the new devices with Snapdragon X Elite chips, which are equipped with a neural processing unit. This suggests that the new devices may be more AI-focused, potentially benefiting Nvidia's business. However, the article also notes that Qualcomm's exclusivity on Windows devices ends this year, which could open the market to other chipmakers like Nvidia. Therefore, the sentiment towards Nvidia is mixed and uncertain.",
+      "sentiment": 0.25,
+      "confidence": 0.75,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/microsoft-unveil-surface-devices-redmond-180340234.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 18:03:40 +0000",
+      "time_taken": 8.93
+    },
+    "8e410aff": {
+      "reasoning": "The sentiment analysis is based on the presence and tone of certain keywords and phrases related to Nvidia's earnings and the broader market. The article discusses Nvidia's upcoming earnings report, the impact of the CHIPS Act on the company's operations and performance, and the potential growth opportunities for the semiconductor giant. It also touches on the current consumer landscape and travel spending trends. The tone of the article is generally positive, with guests expressing optimism about Nvidia's role in the market and its ability to drive growth. However, there are also some concerns expressed about the potential impact of a miss on the broader market.",
+      "sentiment": 0.6,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/investors-eye-nvidia-red-lobster-174152755.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 17:41:52 +0000",
+      "time_taken": 11.04
+    },
+    "e4a31911": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative words and phrases related to the potential short-term stock value of Nvidia. The sentiment score was then calculated based on the overall sentiment of the article.",
+      "sentiment": 0.25,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/886dec8c-8473-3b40-aba2-a65f4017c0f2/these-stocks-are-moving-the.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 17:12:52 +0000",
+      "time_taken": 4.11
+    },
+    "4be7219f": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article to identify any positive or negative statements related to Nvidia's potential short-term stock value. The reasoning used to determine the sentiment value is based on the presence of positive and negative keywords in the article.",
+      "sentiment": 0.6,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/investors-await-nvidia-earnings-commodities-170555301.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 17:05:55 +0000",
+      "time_taken": 8.47
+    },
+    "fc5bc0ae": {
+      "reasoning": "The sentiment analysis was performed on the article to determine the potential short-term stock value of Nvidia. The reasoning used is based on the information provided in the article, including the mixed retail results, promising economic data, and the excitement surrounding the upcoming earnings report for Nvidia.",
+      "sentiment": 0.65,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/1st-quarter-earnings-season-winds-164956506.html?.tsrc=rss",
+      "published": "Mon, 20 May 2024 16:49:56 +0000",
+      "time_taken": 5.02
     }
   }
 }
