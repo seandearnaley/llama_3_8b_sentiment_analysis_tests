@@ -111,9 +111,10 @@ def main():
     models_to_test = config.get("models_to_test", [])
     sentiment_save_folder = config.get("sentiment_save_folder", "sentiments")
     report_output_file = config.get("report_output_file", "reports/model_metrics.xlsx")
-    report_output_csv_file = config.get(
-        "report_output_csv_file", "reports/model_metrics.csv"
-    )
+    report_output_csv_file = config.get("report_output_csv_file")
+
+    if not report_output_csv_file:
+        raise ValueError("No report output CSV file specified in the config.")
 
     model_paths = [
         os.path.join(sentiment_save_folder, model.replace(":", "_"))

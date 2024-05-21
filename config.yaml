@@ -63,7 +63,9 @@ max_news_age: 1
 max_news_items: 20
 
 report_output_file: 'reports/model_metrics.xlsx'
+report_output_csv_file: 'reports/model_metrics.csv'
 report_output_csv_folder: 'reports'
+heatmaps_folder: 'heatmaps'
 
 default_temperature: 0.2
 context_window_size: 8192
