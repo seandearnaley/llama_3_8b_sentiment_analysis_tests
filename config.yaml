@@ -1,4 +1,18 @@
 models_to_test:
+  - 'phi3-4k-sentiment-may-24-2024-2epoches-unsloth.Q4_K_M'
+  - 'phi3-4k-sentiment-may-24-2024-2epoches-unsloth.Q5_K_M'
+  - 'phi3-4k-sentiment-may-24-2024-2epoches-unsloth.Q8_0'
+  - 'phi3-4k-sentiment-may-24-2024-2epoches-unsloth.F16'
+  - 'phi3:3.8b-mini-instruct-4k-q4_K_M'
+  - 'phi3:3.8b-mini-instruct-4k-fp16'
+  - 'mistral-7b-03-sentiment-may-23-2024-2epoch-unsloth.Q4_K_M'
+  - 'mistral-7b-03-sentiment-may-23-2024-2epoch-unsloth.Q5_K_M'
+  - 'mistral-7b-03-sentiment-may-23-2024-2epoch-unsloth.Q8_0'
+  - 'mistral-7b-03-sentiment-may-23-2024-2epoch-unsloth.F16'
+  - 'llama3-8b-sentiment-may-22-2024-2epoches-unsloth.Q4_K_M'
+  - 'llama3-8b-sentiment-may-22-2024-2epoches-unsloth.Q5_K_M'
+  - 'llama3-8b-sentiment-may-22-2024-2epoches-unsloth.Q8_0'
+  - 'llama3-8b-sentiment-may-22-2024-2epoches-unsloth.F16'
   - 'llama3:8b-instruct-sentiment_analysis-q4_K_M'
   - 'llama3:8b-instruct-sentiment_analysis-q5_K_M'
   - 'llama3:8b-instruct-sentiment_analysis-q8_0'
@@ -58,7 +72,7 @@ sentiment_save_folder: 'sentiments'
 
 sample_size: 14
 report_example_sample_size: 5
-ticker_symbol: 'NVDA'
+ticker_symbol: 'MSFT'
 max_news_age: 1
 max_news_items: 20
 

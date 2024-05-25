@@ -11,7 +11,7 @@ CONFIG_FILE = "config.yaml"
 
 # Function to plot and save heatmap
 def plot_heatmap(data, title, value_label, cmap, padding, filename):
-    plt.figure(figsize=(12, 10))
+    plt.figure(figsize=(20, 10))
     sns.heatmap(
         data,
         annot=True,

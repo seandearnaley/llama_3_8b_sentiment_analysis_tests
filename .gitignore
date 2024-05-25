@@ -4,3 +4,8 @@ sentiments_b4_mistral/
 reports_b4_mistral/
 __pycache__/
 news_cache.sqlite
+sentiments_may22
+sentiments_may23_invidia
+reports_may22
+reports_may23_invidia
+heatmaps_may23_nvidia
