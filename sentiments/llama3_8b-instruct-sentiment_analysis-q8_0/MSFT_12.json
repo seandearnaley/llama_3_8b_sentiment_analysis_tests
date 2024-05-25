@@ -1,0 +1,177 @@
+{
+  "average_sentiment": 0.51,
+  "time_taken": 96.84,
+  "sentiments": {
+    "f76ab0da": {
+      "reasoning": "The article highlights Nvidia's CEO Jensen Huang praising Tesla's full self-driving system as the most advanced currently available. This positive endorsement is likely to enhance Tesla's reputation and potentially increase investor confidence in its autonomous driving technology, which could positively impact Tesla's stock value.",
+      "sentiment": 0.6,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidia-ceo-says-tesla-far-ahead-in-self-driving-tech-as-autonomous-driving-efforts-boost-chip-demand-181126677.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 18:11:26 +0000",
+      "time_taken": 4.14
+    },
+    "3d6a60c0": {
+      "reasoning": "The article discusses antitrust violations by major corporations such as Live Nation, Apple, Amazon, Microsoft, and Alphabet. The government's actions against these companies suggest concerns about their market power and potential negative impacts on competition. This could lead to increased regulatory scrutiny and potentially harm the stock value of these companies.",
+      "sentiment": -0.4,
+      "confidence": 0.75,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/doj-widens-antitrust-crackdown-as-it-seeks-a-breakup-of-live-nation-150248909.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 18:01:51 +0000",
+      "time_taken": 4.43
+    },
+    "136f0dde": {
+      "reasoning": "The article discusses Melinda French Gates' resignation from the Bill & Melinda Gates Foundation and her focus on securing gender equality through investing in women-led businesses at her own company, Pivotal Ventures. This shift in focus may be seen as a positive development for women's empowerment but could also raise questions about the future of the foundation under new leadership.",
+      "sentiment": 0.1,
+      "confidence": 0.6,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/melinda-french-gates-her-working-180055864.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 18:00:55 +0000",
+      "time_taken": 5.62
+    },
+    "ce972942": {
+      "reasoning": "The article reports a significant surge in Nvidia's stock price following their positive earnings report, indicating strong investor confidence and likely leading to an increase in stock value. On the other hand, Apple and Tesla experienced drops in their stock prices, suggesting negative sentiment towards these companies.",
+      "sentiment": 0.65,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 17:58:42 +0000",
+      "time_taken": 3.89
+    },
+    "028bdea3": {
+      "reasoning": "The article reports a significant outage of Bing's services, including its search engine and API, which affected various other services that relied on Bing. This outage lasted for over five hours and impacted popular alternative search engines like DuckDuckGo and Ecosia, as well as Microsoft Copilot and ChatGPT Plus subscribers. Such a prolonged outage could negatively impact user trust and satisfaction with Bing's services.",
+      "sentiment": -0.6,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://techcrunch.com/2024/05/23/bing-is-down-bringing-duckduckgo-and-ecosia-down-too/?.tsrc=rss",
+      "published": "Thu, 23 May 2024 16:34:56 +0000",
+      "time_taken": 6.13
+    },
+    "6048aefc": {
+      "reasoning": "The article presents a positive outlook on Amazon's (AMZN) AWS, highlighting its partnership with NinjaTech AI to train and scale their next-generation AI agent. This collaboration is likely to strengthen Amazon's position in the cloud computing market, providing a competitive advantage over peers like Microsoft MSFT and Alphabet's GOOGL Google.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/amazon-amzn-boosts-aws-clientele-161100399.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 16:11:00 +0000",
+      "time_taken": 5.1
+    },
+    "1e2173be": {
+      "reasoning": "The article reports on a potential deal between Microsoft and the UAE AI firm G42, which could involve the transfer of sophisticated chips and tools. This suggests a positive development for Microsoft, as it may lead to increased revenue and competitiveness in the AI market.",
+      "sentiment": 0.4,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/market-chatter-microsoft-president-says-160333156.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 16:03:33 +0000",
+      "time_taken": 3.85
+    },
+    "3e1daab6": {
+      "reasoning": "The article presents Melinda French Gates as a highly influential philanthropist, co-founder of the Bill & Melinda Gates Foundation, with a significant impact on charitable donations and gender inequality initiatives. Her resignation from the foundation marks a new chapter in her life, focusing on empowering women through Pivotal Ventures LLC. The article highlights her personal and professional journey, including her early days at Microsoft, where she faced challenges due to the company's culture. Despite these challenges, French Gates' vision for Microsoft contributed to its success as a financial juggernaut.",
+      "sentiment": 0.6,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/inside-melinda-french-gates-plans-153241300.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 15:32:41 +0000",
+      "time_taken": 8.94
+    },
+    "abc67ae2": {
+      "reasoning": "The article discusses LightOn's potential fundraising efforts to capitalize on investor interest in AI, which could lead to a successful IPO. Additionally, it highlights Microsoft's significant investment in French cloud and AI infrastructure, as well as its partnership with Mistral AI. Macron's comments suggest support for independent growth of tech companies like Mistral AI, indicating a positive sentiment towards the future prospects of these companies.",
+      "sentiment": 0.65,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/french-ai-firm-lighton-mulls-153211729.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 15:32:11 +0000",
+      "time_taken": 5.71
+    },
+    "4e11f0d7": {
+      "reasoning": "The article reports a significant digital investment package worth $1 billion between Microsoft and G42, aimed at enhancing Kenya's digital infrastructure and capabilities. This collaboration is expected to bring substantial benefits, including the construction of a state-of-the-art green data center, AI model development, innovation hubs, improved connectivity, and enhanced digital safety and security.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/microsoft-msft-g42-announce-1b-152700627.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 15:27:00 +0000",
+      "time_taken": 8.15
+    },
+    "8c4697c2": {
+      "reasoning": "The article presents a positive outlook on Oracle's business strategy, highlighting its ability to compete with giants like Amazon and Microsoft through innovative partnerships and customer-centric approaches. The mention of collaborations with Nvidia and Microsoft demonstrates Oracle's willingness to adapt to changing market conditions, which could lead to increased revenue and growth opportunities.",
+      "sentiment": 0.6,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://www.fool.com/investing/2024/05/23/oracle-making-ai-cloud-strides/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
+      "published": "Thu, 23 May 2024 14:44:00 +0000",
+      "time_taken": 5.12
+    },
+    "f1f7d023": {
+      "reasoning": "The article reports a negative impact on the Dow Jones due to high jobless claims, which could lead to decreased investor confidence and potentially lower stock values. However, it also highlights positive news for Nvidia stock, as its surge above $1,000 is likely driven by strong earnings results, indicating increased investor confidence and potentially higher stock values.",
+      "sentiment": 0.15,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/9a04e4bd-2fe0-314f-93ba-2babb9399ca2/dow-jones-falls-after-jobless.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 14:07:29 +0000",
+      "time_taken": 4.68
+    },
+    "9a1af3a2": {
+      "reasoning": "The article presents a positive outlook on the companies mentioned, with Nvidia's consistent target-smashing and Microsoft's teasing of a potential breakthrough and record high. The partnership between Microsoft and ServiceNow for AI assistants also suggests innovation and growth opportunities.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/0b8a61b8-5797-34e8-84b5-1b05b22cec5f/as-nvidia-smashes-targets%2C.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 14:00:00 +0000",
+      "time_taken": 3.69
+    },
+    "32867b46": {
+      "reasoning": "The sentiment is neutral based on the financial context of the sentence.",
+      "sentiment": 0.0,
+      "confidence": 1.0,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidias-blowout-earnings-highlight-a-challenge-in-the-ai-age-134542104.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 13:45:42 +0000",
+      "time_taken": 2.07
+    },
+    "a9faff6c": {
+      "reasoning": "The article reports a significant investment of $1bn by Microsoft and G42 in Kenya's digital ecosystem, which is expected to support economic development and bring technology to new countries, especially across Africa. This partnership between US tech giant Microsoft and Emirati AI company G42 is seen as a positive development for the region.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://www.investmentmonitor.ai/news/microsoft-and-g42-announce-1bn-digital-investment-in-kenya/?.tsrc=rss",
+      "published": "Thu, 23 May 2024 12:45:51 +0000",
+      "time_taken": 5.13
+    },
+    "e17b754c": {
+      "reasoning": "The article presents a positive outlook on megacap tech companies, particularly Microsoft, in terms of their ability to monetize AI technology. It highlights Microsoft's strategic use of AI to upgrade legacy solutions and its diversified business model spanning multiple consumer- and enterprise-facing touchpoints. The article also mentions the company's strong financial position, including high margins, massive free-cash-flow generation, existing cash position, and rock-solid balance sheet, which would enable it to make strategic acquisitions or ride out a downturn.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://www.fool.com/investing/2024/05/23/vanguard-etf-all-time-high-sp-500-nasdaq/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:30:00 +0000",
+      "time_taken": 8.39
+    },
+    "0f39c9ab": {
+      "reasoning": "The article discusses Melinda Gates' departure from the Gates Foundation, but does not provide any information that would suggest a positive or negative impact on the stock value of Microsoft (MSFT). The article focuses on Gates' leadership journey and her experiences at Microsoft, but does not mention any recent events or news that could affect the company's stock.",
+      "sentiment": 0.0,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/melinda-gates-on-techs-bro-culture-and-investing-in-the-next-generation-of-female-leaders-111955057.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:19:55 +0000",
+      "time_taken": 5.21
+    },
+    "76739c9f": {
+      "reasoning": "The sentiment is positive based on the financial context of the sentence.",
+      "sentiment": 1.0,
+      "confidence": 0.4,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/6fa55a71-2a5c-3c7c-852c-8da7ea2d36ba/best-tech-stocks-to-buy-and.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:05:29 +0000",
+      "time_taken": 1.97
+    },
+    "dccd1b44": {
+      "reasoning": "The article presents a positive outlook on UiPath's business strategy, highlighting its strong revenue growth fueled by AI technology and partnerships with firms like Deloitte and Microsoft. The involvement of these partners in reselling or integrating UiPath's capabilities suggests a significant market presence and potential for further growth.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://www.fool.com/investing/2024/05/23/is-uipath-stock-a-buy-now/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:00:00 +0000",
+      "time_taken": 4.61
+    }
+  }
+}

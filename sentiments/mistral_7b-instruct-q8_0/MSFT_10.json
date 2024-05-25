@@ -1,0 +1,156 @@
+{
+  "average_sentiment": 0.63,
+  "time_taken": 116.85,
+  "sentiments": {
+    "f76ab0da": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/news/nvidia-ceo-says-tesla-far-ahead-in-self-driving-tech-as-autonomous-driving-efforts-boost-chip-demand-181126677.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 18:11:26 +0000",
+      "time_taken": 10.66
+    },
+    "3d6a60c0": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/news/doj-widens-antitrust-crackdown-as-it-seeks-a-breakup-of-live-nation-150248909.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 18:01:51 +0000",
+      "time_taken": 4.02
+    },
+    "136f0dde": {
+      "reasoning": "The sentiment of this article is neutral as it does not contain any specific information about the potential short-term stock value of Microsoft.",
+      "sentiment": 0.0,
+      "confidence": 1.0,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/melinda-french-gates-her-working-180055864.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 18:00:55 +0000",
+      "time_taken": 3.85
+    },
+    "ce972942": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative words and phrases. The sentiment value is calculated based on the overall sentiment of the article.",
+      "sentiment": 0.2,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 17:58:42 +0000",
+      "time_taken": 3.46
+    },
+    "028bdea3": {
+      "valid": false,
+      "url": "https://techcrunch.com/2024/05/23/bing-is-down-bringing-duckduckgo-and-ecosia-down-too/?.tsrc=rss",
+      "published": "Thu, 23 May 2024 16:34:56 +0000",
+      "time_taken": 6.29
+    },
+    "6048aefc": {
+      "reasoning": "The sentiment analysis is based on the presence of positive keywords such as 'solidifying prospects', 'continuous momentum', 'strong adoption', 'strength in Azure AI', 'noteworthy efforts', 'growth in AI Copilot', and 'major positive' in the article. The negative keyword 'Microsoft' is also present, but its impact on the sentiment is mitigated by the positive keywords.",
+      "sentiment": 0.65,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/amazon-amzn-boosts-aws-clientele-161100399.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 16:11:00 +0000",
+      "time_taken": 6.54
+    },
+    "1e2173be": {
+      "reasoning": "The sentiment analysis was performed using natural language processing techniques to identify positive and negative words in the article. The sentiment value is calculated based on the ratio of positive to negative words.",
+      "sentiment": 0.5,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/market-chatter-microsoft-president-says-160333156.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 16:03:33 +0000",
+      "time_taken": 3.57
+    },
+    "3e1daab6": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/video/inside-melinda-french-gates-plans-153241300.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 15:32:41 +0000",
+      "time_taken": 6.45
+    },
+    "abc67ae2": {
+      "reasoning": "The sentiment analysis is based on the presence of positive keywords such as 'artificial-intelligence', 'booming investor interest', 'capitalize', 'investment', 'French cloud and AI infrastructure', 'Microsoft', 'partnership', 'grow independently', and 'big players' in the tech sector. The sentiment is also influenced by the fact that Microsoft has announced a significant investment in French cloud and AI infrastructure, which could positively impact the potential short-term stock value of Microsoft.",
+      "sentiment": 0.75,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/french-ai-firm-lighton-mulls-153211729.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 15:32:11 +0000",
+      "time_taken": 7.37
+    },
+    "4e11f0d7": {
+      "reasoning": "The sentiment analysis was performed on the news article about Microsoft's digital investment package in Kenya. The sentiment was determined based on the positive aspects of the collaboration, such as the construction of a state-of-the-art green data center and the development of AI models tailored to Kenya's linguistic and cultural diversity. Additionally, the partnership with G42 and Kenya's Ministry of Information, Communications, and the Digital Economy was seen as positive.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/microsoft-msft-g42-announce-1b-152700627.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 15:27:00 +0000",
+      "time_taken": 10.22
+    },
+    "8c4697c2": {
+      "reasoning": "The sentiment towards the potential short-term stock value of Microsoft is positive. The article highlights Oracle's recent partnership with Microsoft, which allows its customers to access Oracle database programs running on Microsoft's cloud infrastructure. This partnership shows that Oracle is not wedded to traditional cloud solution strategies and is willing to collaborate with other companies to grow its business. Additionally, the article mentions Oracle's AI cloud offerings, which can be nimble and responsive for each company's unique needs. These factors suggest that Oracle is well-positioned to compete in the cloud services market and could potentially see positive growth in the short term.",
+      "sentiment": 0.65,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://www.fool.com/investing/2024/05/23/oracle-making-ai-cloud-strides/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
+      "published": "Thu, 23 May 2024 14:44:00 +0000",
+      "time_taken": 9.26
+    },
+    "f1f7d023": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/m/9a04e4bd-2fe0-314f-93ba-2babb9399ca2/dow-jones-falls-after-jobless.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 14:07:29 +0000",
+      "time_taken": 3.59
+    },
+    "9a1af3a2": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative words and phrases. The presence of positive words such as 'smashes targets', 'teases a new breakout', and 'record high' indicate a positive sentiment towards the potential short-term stock value of Microsoft.",
+      "sentiment": 0.75,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/0b8a61b8-5797-34e8-84b5-1b05b22cec5f/as-nvidia-smashes-targets%2C.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 14:00:00 +0000",
+      "time_taken": 4.92
+    },
+    "32867b46": {
+      "reasoning": "The sentiment analysis is based on the presence of positive keywords such as 'demand', 'hyperscalers', 'AI', and 'cloud computing' in the article, which suggest a positive outlook for Microsoft's potential short-term stock value.",
+      "sentiment": 0.65,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidias-blowout-earnings-highlight-a-challenge-in-the-ai-age-134542104.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 13:45:42 +0000",
+      "time_taken": 4.49
+    },
+    "a9faff6c": {
+      "reasoning": "The sentiment of the article is determined by analyzing the language used to describe the deal between Microsoft and G42 in Kenya. Positive words such as 'largest', 'support economic development', 'opportunity', 'new countries', 'transformative era', 'sustainable technological growth', 'cloud services', and 'AI' are used to describe the partnership. The sentiment is further reinforced by statements from Brad Smith and Peng Xiao expressing excitement and commitment to the project.",
+      "sentiment": 0.6,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://www.investmentmonitor.ai/news/microsoft-and-g42-announce-1bn-digital-investment-in-kenya/?.tsrc=rss",
+      "published": "Thu, 23 May 2024 12:45:51 +0000",
+      "time_taken": 7.49
+    },
+    "e17b754c": {
+      "reasoning": "The sentiment analysis is based on the article's content, which discusses the potential short-term stock value of Microsoft and its position in the tech industry. The article highlights Microsoft's strengths in using AI to monetize legacy solutions and improve cloud infrastructure through Azure OpenAI. It also mentions Microsoft's diversified business model and existing resources, which give it an advantage in the market. Additionally, the article discusses the potential for megacap growth in the tech sector and Microsoft's potential to become a $10 trillion company in the future. The analysis is based on these factors.",
+      "sentiment": 0.75,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://www.fool.com/investing/2024/05/23/vanguard-etf-all-time-high-sp-500-nasdaq/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:30:00 +0000",
+      "time_taken": 10.35
+    },
+    "0f39c9ab": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/news/melinda-gates-on-techs-bro-culture-and-investing-in-the-next-generation-of-female-leaders-111955057.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:19:55 +0000",
+      "time_taken": 5.39
+    },
+    "76739c9f": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article using natural language processing techniques. The sentiment value was determined based on the presence of positive and negative words in the text.",
+      "sentiment": 0.6,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/6fa55a71-2a5c-3c7c-852c-8da7ea2d36ba/best-tech-stocks-to-buy-and.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:05:29 +0000",
+      "time_taken": 3.78
+    },
+    "dccd1b44": {
+      "valid": false,
+      "url": "https://www.fool.com/investing/2024/05/23/is-uipath-stock-a-buy-now/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:00:00 +0000",
+      "time_taken": 5.15
+    }
+  }
+}

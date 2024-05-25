@@ -1,0 +1,177 @@
+{
+  "average_sentiment": 0.42,
+  "time_taken": 70.64,
+  "sentiments": {
+    "f76ab0da": {
+      "reasoning": "The article does not directly mention the potential short-term stock value of Microsoft, but it provides information about Nvidia's Data Center revenue and its relationship with cloud providers like Microsoft. The positive tone towards Tesla's full self-driving system and Nvidia's chips suggests a neutral to slightly positive sentiment towards Microsoft as one of the major customers of Nvidia's Data Center services.",
+      "sentiment": 0.05,
+      "confidence": 0.7,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidia-ceo-says-tesla-far-ahead-in-self-driving-tech-as-autonomous-driving-efforts-boost-chip-demand-181126677.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 18:11:26 +0000",
+      "time_taken": 3.89
+    },
+    "3d6a60c0": {
+      "reasoning": "The article discusses antitrust violations by tech giants Apple, Amazon, and Microsoft, indicating potential regulatory scrutiny. This could negatively impact their stock values in the short-term.",
+      "sentiment": -0.42,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/doj-widens-antitrust-crackdown-as-it-seeks-a-breakup-of-live-nation-150248909.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 18:01:51 +0000",
+      "time_taken": 2.3
+    },
+    "136f0dde": {
+      "reasoning": "The article does not provide any direct information about Microsoft's short-term stock value. However, it discusses the personal and professional changes of Melinda French Gates, co-founder Bill Gates' ex-wife, which may have a potential impact on the company's future direction.",
+      "sentiment": 0.05,
+      "confidence": 0.7,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/melinda-french-gates-her-working-180055864.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 18:00:55 +0000",
+      "time_taken": 3.86
+    },
+    "ce972942": {
+      "reasoning": "The article does not mention Microsoft's stock performance, but it discusses the movement of Nvidia, Apple, and Tesla stocks in response to their respective earnings reports. The tone is neutral, focusing on the market reaction rather than expressing a sentiment towards Microsoft.",
+      "sentiment": 0.0,
+      "confidence": 1.0,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 17:58:42 +0000",
+      "time_taken": 2.64
+    },
+    "028bdea3": {
+      "reasoning": "The article reports on an outage of Bing's search engine and its API, which affected various services including alternative search engines and Microsoft Copilot. The tone is neutral, focusing on the facts of the incident without expressing any opinion or emotion.",
+      "sentiment": 0.0,
+      "confidence": 1.0,
+      "valid": true,
+      "url": "https://techcrunch.com/2024/05/23/bing-is-down-bringing-duckduckgo-and-ecosia-down-too/?.tsrc=rss",
+      "published": "Thu, 23 May 2024 16:34:56 +0000",
+      "time_taken": 3.67
+    },
+    "6048aefc": {
+      "reasoning": "The article discusses Amazon's partnership with NinjaTech AI, which is expected to continue providing a competitive advantage over its peers like Microsoft. The article highlights Microsoft's strong momentum in its Intelligent Cloud business, driven by the solid adoption of Azure and growth in AI Copilot. However, it also mentions Google Cloud as a key catalyst for Alphabet's growth.",
+      "sentiment": 0.43,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/amazon-amzn-boosts-aws-clientele-161100399.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 16:11:00 +0000",
+      "time_taken": 4.1
+    },
+    "1e2173be": {
+      "reasoning": "The article discusses a potential deal between Microsoft and G42, an AI firm from the UAE. The mention of 'sophisticated chips' and 'tools' implies that this deal could have significant implications for Microsoft's technology and potentially increase its value in the short-term.",
+      "sentiment": 0.12,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/market-chatter-microsoft-president-says-160333156.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 16:03:33 +0000",
+      "time_taken": 2.96
+    },
+    "3e1daab6": {
+      "reasoning": "The article discusses Melinda French Gates' career, philanthropic work, and personal life, including her time at Microsoft. The tone is neutral, focusing on her achievements and challenges rather than expressing a clear opinion about the potential short-term stock value of Microsoft.",
+      "sentiment": 0.0,
+      "confidence": 1.0,
+      "valid": true,
+      "url": "https://finance.yahoo.com/video/inside-melinda-french-gates-plans-153241300.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 15:32:41 +0000",
+      "time_taken": 5.14
+    },
+    "abc67ae2": {
+      "reasoning": "The article discusses LightOn's potential IPO and Microsoft's \u20ac4 billion investment in French cloud and AI infrastructure, which suggests a positive sentiment towards Microsoft's short-term stock value.",
+      "sentiment": 0.62,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/french-ai-firm-lighton-mulls-153211729.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 15:32:11 +0000",
+      "time_taken": 2.93
+    },
+    "4e11f0d7": {
+      "reasoning": "The article highlights a significant investment by Microsoft and G42 in Kenya's digital infrastructure, which is expected to enhance the country's capabilities and create new opportunities. The partnership also includes plans for AI development, data center construction, and cybersecurity support. Additionally, the article mentions Microsoft's substantial investments in data centers, its commitment to pushing boundaries in AI innovation, and its strategic collaborations and expansion initiatives.",
+      "sentiment": 0.82,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/microsoft-msft-g42-announce-1b-152700627.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 15:27:00 +0000",
+      "time_taken": 7.73
+    },
+    "8c4697c2": {
+      "reasoning": "The article discusses Oracle's partnership with Microsoft, highlighting its ability to adapt to customer needs through AI cloud offerings. Although Oracle has a small share of the cloud services market, it is not deterred by competition from giants like Amazon and Microsoft.",
+      "sentiment": 0.55,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://www.fool.com/investing/2024/05/23/oracle-making-ai-cloud-strides/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
+      "published": "Thu, 23 May 2024 14:44:00 +0000",
+      "time_taken": 3.83
+    },
+    "f1f7d023": {
+      "reasoning": "The article does not mention Microsoft's stock value or performance, so the sentiment analysis is focused on the overall market trend and other companies' performances. The Dow Jones dropping 225 points suggests a negative sentiment towards the market, while Nvidia's strong earnings results indicate a positive sentiment.",
+      "sentiment": -0.45,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/9a04e4bd-2fe0-314f-93ba-2babb9399ca2/dow-jones-falls-after-jobless.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 14:07:29 +0000",
+      "time_taken": 2.94
+    },
+    "9a1af3a2": {
+      "reasoning": "The article mentions Microsoft's potential for a 'breakout' and 'record high', indicating a positive sentiment towards its short-term stock value. The mention of Nvidia's success also implies a positive correlation between the two companies, further supporting the optimistic outlook.",
+      "sentiment": 0.82,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/0b8a61b8-5797-34e8-84b5-1b05b22cec5f/as-nvidia-smashes-targets%2C.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 14:00:00 +0000",
+      "time_taken": 2.98
+    },
+    "32867b46": {
+      "reasoning": "The article mentions Microsoft (MSFT) as one of the hyperscalers driving demand for data centers, indicating a positive outlook on its short-term stock value.",
+      "sentiment": 0.62,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidias-blowout-earnings-highlight-a-challenge-in-the-ai-age-134542104.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 13:45:42 +0000",
+      "time_taken": 2.37
+    },
+    "a9faff6c": {
+      "reasoning": "The article highlights a significant investment by Microsoft and G42 in Kenya's digital ecosystem, which is expected to support economic development. The quotes from the executives emphasize the potential for collaboration between the US and UAE, as well as the benefits of AI adoption in Africa. The tone is optimistic and forward-looking.",
+      "sentiment": 0.73,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://www.investmentmonitor.ai/news/microsoft-and-g42-announce-1bn-digital-investment-in-kenya/?.tsrc=rss",
+      "published": "Thu, 23 May 2024 12:45:51 +0000",
+      "time_taken": 3.92
+    },
+    "e17b754c": {
+      "reasoning": "The article discusses the potential for megacap growth, specifically highlighting Microsoft's ability to monetize AI and its diversified business model. The author argues that Microsoft's size and resources will enable it to take advantage of AI and ride out any downturns.",
+      "sentiment": 0.82,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://www.fool.com/investing/2024/05/23/vanguard-etf-all-time-high-sp-500-nasdaq/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:30:00 +0000",
+      "time_taken": 4.99
+    },
+    "0f39c9ab": {
+      "reasoning": "The article does not directly mention the potential short-term stock value of Microsoft (MSFT), but it discusses Melinda Gates' departure from the Gates Foundation and her journey at Microsoft in the 1980s. The tone is neutral, focusing on Gates' leadership story rather than providing any specific insights about MSFT's stock performance.",
+      "sentiment": 0.0,
+      "confidence": 1.0,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/melinda-gates-on-techs-bro-culture-and-investing-in-the-next-generation-of-female-leaders-111955057.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:19:55 +0000",
+      "time_taken": 4.0
+    },
+    "76739c9f": {
+      "reasoning": "The article does not mention Microsoft's stock value directly, but it discusses TSMC (Taiwan Semiconductor Manufacturing Company) and Nvidia, which are unrelated to Microsoft. The sentiment is positive towards TSMC and Nvidia, indicating a neutral sentiment towards Microsoft.",
+      "sentiment": 0.0,
+      "confidence": 1.0,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/6fa55a71-2a5c-3c7c-852c-8da7ea2d36ba/best-tech-stocks-to-buy-and.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:05:29 +0000",
+      "time_taken": 2.81
+    },
+    "dccd1b44": {
+      "reasoning": "The article highlights Microsoft's strong revenue growth, driven by its AI technology and business strategy. Additionally, the company's partnership with UiPath is mentioned as an important factor in its success. This positive information about Microsoft's performance and partnerships suggests a positive sentiment towards its potential short-term stock value.",
+      "sentiment": 0.83,
+      "confidence": 0.92,
+      "valid": true,
+      "url": "https://www.fool.com/investing/2024/05/23/is-uipath-stock-a-buy-now/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:00:00 +0000",
+      "time_taken": 3.59
+    }
+  }
+}

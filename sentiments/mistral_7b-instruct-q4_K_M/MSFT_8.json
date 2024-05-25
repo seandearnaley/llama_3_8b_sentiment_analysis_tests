@@ -1,0 +1,159 @@
+{
+  "average_sentiment": 0.56,
+  "time_taken": 83.89,
+  "sentiments": {
+    "f76ab0da": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/news/nvidia-ceo-says-tesla-far-ahead-in-self-driving-tech-as-autonomous-driving-efforts-boost-chip-demand-181126677.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 18:11:26 +0000",
+      "time_taken": 3.46
+    },
+    "3d6a60c0": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/news/doj-widens-antitrust-crackdown-as-it-seeks-a-breakup-of-live-nation-150248909.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 18:01:51 +0000",
+      "time_taken": 2.51
+    },
+    "136f0dde": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/video/melinda-french-gates-her-working-180055864.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 18:00:55 +0000",
+      "time_taken": 7.23
+    },
+    "ce972942": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative words and phrases related to Nvidia, Apple, and Tesla. The sentiment score was then calculated based on the weighted sum of these individual scores.",
+      "sentiment": 0.15,
+      "confidence": 0.75,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/4205eaa9-f620-3a0b-a81a-0e82c7c9fd0b/magnificent-seven-stocks%3A.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 17:58:42 +0000",
+      "time_taken": 2.8
+    },
+    "028bdea3": {
+      "valid": false,
+      "url": "https://techcrunch.com/2024/05/23/bing-is-down-bringing-duckduckgo-and-ecosia-down-too/?.tsrc=rss",
+      "published": "Thu, 23 May 2024 16:34:56 +0000",
+      "time_taken": 4.24
+    },
+    "6048aefc": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive, negative, and neutral keywords related to Microsoft's potential short-term stock value. The sentiment score was then calculated based on the number of positive and negative keywords found.",
+      "sentiment": 0.45,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/amazon-amzn-boosts-aws-clientele-161100399.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 16:11:00 +0000",
+      "time_taken": 3.55
+    },
+    "1e2173be": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/news/market-chatter-microsoft-president-says-160333156.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 16:03:33 +0000",
+      "time_taken": 2.97
+    },
+    "3e1daab6": {
+      "valid": false,
+      "url": "https://finance.yahoo.com/video/inside-melinda-french-gates-plans-153241300.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 15:32:41 +0000",
+      "time_taken": 5.63
+    },
+    "abc67ae2": {
+      "reasoning": "The sentiment analysis was performed on the provided news article using natural language processing techniques to identify positive and negative words and phrases related to Microsoft's potential short-term stock value. The sentiment score was calculated based on the overall tone of the article.",
+      "sentiment": 0.5,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/french-ai-firm-lighton-mulls-153211729.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 15:32:11 +0000",
+      "time_taken": 3.48
+    },
+    "4e11f0d7": {
+      "reasoning": "The sentiment analysis of the article is based on the positive news about Microsoft's partnership with G42 and Kenya's Ministry of Information, Communications, and the Digital Economy to invest $1 billion in digital infrastructure and capabilities. The collaboration includes initiatives such as the construction of a state-of-the-art green data center, development of AI models tailored to Kenya's linguistic and cultural diversity, enhancement of international and domestic Internet connectivity, establishment of a trusted data zone based on global standards, and comprehensive digital and AI skills training. Additionally, Microsoft's investment in data centers is highlighted as a significant trend among tech companies to fuel AI development, which demands substantial energy-intensive infrastructure.",
+      "sentiment": 0.8,
+      "confidence": 0.9,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/microsoft-msft-g42-announce-1b-152700627.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 15:27:00 +0000",
+      "time_taken": 10.47
+    },
+    "8c4697c2": {
+      "reasoning": "The sentiment of the article is determined by analyzing the language used to describe Oracle's partnership with Microsoft and its AI cloud offerings. The article highlights that Oracle is able to compete in the AI market despite having a small share of the cloud services market, and that it is able to do so through partnerships with other companies like Microsoft. The article also mentions Oracle's customer-centric approach and its ability to provide nimble and responsive solutions for each company's unique needs. These factors suggest a positive sentiment towards Oracle's potential short-term stock value.",
+      "sentiment": 0.5,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://www.fool.com/investing/2024/05/23/oracle-making-ai-cloud-strides/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
+      "published": "Thu, 23 May 2024 14:44:00 +0000",
+      "time_taken": 6.13
+    },
+    "f1f7d023": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article and identifying positive and negative words related to Microsoft's potential short-term stock value. The sentiment score was calculated based on the ratio of positive to negative words.",
+      "sentiment": 0.5,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/9a04e4bd-2fe0-314f-93ba-2babb9399ca2/dow-jones-falls-after-jobless.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 14:07:29 +0000",
+      "time_taken": 2.66
+    },
+    "9a1af3a2": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article for positive and negative words and phrases. The sentiment value is calculated as the sum of the sentiment scores of all the words in the article divided by the total number of words.",
+      "sentiment": 0.45,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/0b8a61b8-5797-34e8-84b5-1b05b22cec5f/as-nvidia-smashes-targets%2C.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 14:00:00 +0000",
+      "time_taken": 2.91
+    },
+    "32867b46": {
+      "reasoning": "The sentiment analysis was performed by identifying the keywords 'demand', 'data centers', 'Microsoft', 'hyperscalers', 'Amazon', 'Alphabet', 'Meta', 'banks', and 'pharmaceutical companies' in the article. The presence of these keywords indicates a positive sentiment towards Microsoft's potential short-term stock value, as they are mentioned alongside other successful companies in the data center and cloud computing industries.",
+      "sentiment": 0.67,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/nvidias-blowout-earnings-highlight-a-challenge-in-the-ai-age-134542104.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 13:45:42 +0000",
+      "time_taken": 4.3
+    },
+    "a9faff6c": {
+      "reasoning": "The sentiment of the article is positive as it describes a significant investment in Kenya's digital ecosystem by Microsoft and G42, which is expected to support economic development. The partnership between the two companies is seen as an opportunity for growth and innovation in the region.",
+      "sentiment": 0.8,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://www.investmentmonitor.ai/news/microsoft-and-g42-announce-1bn-digital-investment-in-kenya/?.tsrc=rss",
+      "published": "Thu, 23 May 2024 12:45:51 +0000",
+      "time_taken": 3.74
+    },
+    "e17b754c": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article to determine if it expressed positive or negative sentiment towards the potential short-term stock value of Microsoft. The analysis also took into account the author's confidence in their predictions and the overall market trends in the tech sector.",
+      "sentiment": 0.7,
+      "confidence": 0.8,
+      "valid": true,
+      "url": "https://www.fool.com/investing/2024/05/23/vanguard-etf-all-time-high-sp-500-nasdaq/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:30:00 +0000",
+      "time_taken": 5.63
+    },
+    "0f39c9ab": {
+      "reasoning": "The sentiment analysis is based on a rule-based approach that considers the presence of positive or negative keywords in the article. The article mentions Melinda Gates leaving the Gates Foundation, which could be seen as a negative event. However, the article also talks about her leadership journey and empowering the next generation of female leaders, which could be seen as positive. Therefore, the sentiment analysis is based on the overall context of the article.",
+      "sentiment": 0.12,
+      "confidence": 0.85,
+      "valid": true,
+      "url": "https://finance.yahoo.com/news/melinda-gates-on-techs-bro-culture-and-investing-in-the-next-generation-of-female-leaders-111955057.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:19:55 +0000",
+      "time_taken": 4.82
+    },
+    "76739c9f": {
+      "reasoning": "The sentiment analysis was performed by analyzing the text of the article. The article mentions TSMC being one of the best tech stocks to buy and watch now, which suggests a positive sentiment towards the potential short-term stock value of Microsoft. Additionally, the article mentions strong results from Nvidia, which could positively impact the stock market and potentially increase the value of Microsoft's shares.",
+      "sentiment": 0.75,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://finance.yahoo.com/m/6fa55a71-2a5c-3c7c-852c-8da7ea2d36ba/best-tech-stocks-to-buy-and.html?.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:05:29 +0000",
+      "time_taken": 3.9
+    },
+    "dccd1b44": {
+      "reasoning": "The sentiment analysis was performed using natural language processing techniques to identify positive and negative words in the article. The presence of positive words such as 'fueling', 'reselling', and 'important' indicates a positive sentiment towards the potential short-term stock value of Microsoft.",
+      "sentiment": 0.8,
+      "confidence": 0.95,
+      "valid": true,
+      "url": "https://www.fool.com/investing/2024/05/23/is-uipath-stock-a-buy-now/?source=eptyholnk0000202&utm_source=yahoo-host-full&utm_medium=feed&utm_campaign=article&.tsrc=rss",
+      "published": "Thu, 23 May 2024 11:00:00 +0000",
+      "time_taken": 3.46
+    }
+  }
+}
